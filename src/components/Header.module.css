@@ -1,0 +1,48 @@
+.divNavigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 2% 0 2%;
+}
+
+.logo {
+    height: 80px;
+    margin: 0 50%;
+}
+
+.navLinks {
+    display: flex;
+    justify-content: flex-end;
+
+    width: 30%;
+    padding: 2% 1%;
+}
+
+.navLink {
+    color: var(--red);
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+
+    margin: auto 4%;
+    white-space: nowrap;
+}
+
+
+.navLink:link {
+    color: var(--white);
+}
+
+.navLink:hover {
+    color: var(--white);
+}
+
+.navLink:visited {
+    color: var(--white);
+}
+
+.navLink:active {
+    color: var(--white);
+}

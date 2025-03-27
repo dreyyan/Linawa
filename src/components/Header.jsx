@@ -1,0 +1,29 @@
+import React from 'react'
+// ROUTING
+import {Link} from "react-router-dom";
+// PAGES
+import Candidates from '../pages/candidates.jsx'
+import Policies from '../pages/policies.jsx'
+import PetitionsAndPolls from '../pages/petitions-and-polls.jsx'
+import News from '../pages/news.jsx'
+import AboutUs from '../pages/about-us.jsx'
+// STYLE
+import styles from './Header.module.css'
+
+const Header = () => {
+    return (
+        <>
+            <div className={styles.divNavigation}>
+                <a href="/"><img src="../public/logo.png" className={styles.logo}/></a>
+                <nav className={styles.navLinks}>
+                    <Link to="/pages/candidates" className={styles.navLink}>CANDIDATES</Link>
+                    <Link to="/pages/policies" className={styles.navLink}>POLICIES</Link>
+                    <Link to="/pages/petitions-and-polls" className={styles.navLink}>PETITIONS & POLLS</Link>
+                    <Link to="/pages/news" className={styles.navLink}>NEWS</Link>
+                    <Link to="/pages/about-us" className={styles.navLink}>ABOUT US</Link>
+                </nav>
+            </div>
+        </>
+    )
+}
+export default Header

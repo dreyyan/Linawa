@@ -1,0 +1,12 @@
+:root {
+  --blue: #0032A0;
+  --red: #BF0D3E;
+  --white: #FFFFFF;
+  --yellow: #FED141;
+  --black: #000000;
+}
+
+.header {
+  grid-column: span 3;
+  background-color: var(--red);
+}

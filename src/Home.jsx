@@ -1,0 +1,30 @@
+import React, { useState } from 'react'
+import './Home.css'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// MODULES
+import Header from './components/Header.jsx'
+// PAGES
+import Candidates from './pages/candidates.jsx'
+import Policies from './pages/policies.jsx'
+import PetitionsAndPolls from './pages/petitions-and-polls.jsx'
+import News from './pages/news.jsx'
+import AboutUs from './pages/about-us.jsx'
+
+function Home() {
+  return (
+    <>
+        <div className="header"><Header/></div>
+        <div className="routes">
+            <Routes>
+                <Route path="/pages/candidates" element={<Candidates />} />
+                <Route path="/pages/policies" element={<Policies />} />
+                <Route path="/pages/petitions-and-polls" element={<PetitionsAndPolls />} />
+                <Route path="/pages/news" element={<News />} />
+                <Route path="/pages/about-us" element={<AboutUs />} />
+            </Routes>
+        </div>
+    </>
+  )
+}
+
+export default Home
