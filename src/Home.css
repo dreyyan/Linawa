@@ -7,6 +7,21 @@
 }
 
 .header {
-  grid-column: span 3;
   background-color: var(--red);
+}
+
+.pageTitle {
+  color: var(--white);
+  font-size: 4.5rem;
+  background-color: var(--yellow);
+  border-bottom: 4px groove RGBA(254, 209, 65, 0.6);
+  text-shadow: 3px 3px 0px rgba(212, 170, 35, 0.8);
+
+  font-weight: bolder;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 0 fill;
+  width: 100%;
 }

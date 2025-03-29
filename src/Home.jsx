@@ -3,12 +3,15 @@ import './Home.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // MODULES
 import Header from './components/Header.jsx'
+import CandidatesProfile from './components/CandidatesProfile.jsx'
 // PAGES
 import Candidates from './pages/candidates.jsx'
 import Policies from './pages/policies.jsx'
 import PetitionsAndPolls from './pages/petitions-and-polls.jsx'
 import News from './pages/news.jsx'
 import AboutUs from './pages/about-us.jsx'
+// BOOTSTRAP
+import 'bootstrap/dist/css/bootstrap.css'
 
 function Home() {
   return (
