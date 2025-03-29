@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './Home.css'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // MODULES
 import Header from './components/Header.jsx'
@@ -12,6 +11,7 @@ import News from './pages/news.jsx'
 import AboutUs from './pages/about-us.jsx'
 // BOOTSTRAP
 import 'bootstrap/dist/css/bootstrap.css'
+import './Home.css'
 
 function Home() {
   return (
@@ -20,6 +20,7 @@ function Home() {
         <div className="routes">
             <Routes>
                 <Route path="/pages/candidates" element={<Candidates />} />
+                <Route path="/candidates/:id" element={<CandidatesProfile />} /> {/* Candidate profile */}
                 <Route path="/pages/policies" element={<Policies />} />
                 <Route path="/pages/petitions-and-polls" element={<PetitionsAndPolls />} />
                 <Route path="/pages/news" element={<News />} />

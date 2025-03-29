@@ -1,3 +1,60 @@
-.custom-border {
-    border: 2px solid #FED141;
+/* Horizontal Layout for small screens */
+:global(.list-group.list-group-horizontal-sm) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Prevent overflowing */
+    width: 40%;
+}
+
+:global(.list-group .list-group-item.list-group-item-action.list-group-item-warning) {
+    /*background-color: var(--yellow) !important;*/
+    color: black !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Header Row */
+:global(.list-group .list-group-item.font-weight-bold) {
+    background-color: var(--red);
+    color: var(--white, #ffffff);
+    text-align: center;
+    font-weight: bold;
+    border: none;
+
+    min-width: 30%;
+}
+
+/* Candidate Row */
+:global(.list-group) {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+/* Same with for all candidates */
+:global(.list-group-item) {
+    color: var(--black, #000);
+    background-color: var(--light, #f8f9fa);
+    border: 1px solid var(--gray, #ddd);
+
+    min-width: 60%;
+}
+
+/* Clickable names */
+:global(.list-group-item-action) {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Links */
+:global(.list-group-item-action:hover) {
+    background-color: var(--warning, #ffc107);
+    color: var(--black, #000);
+}
+
+/* Row alignment */
+:global(.list-group-horizontal-sm .list-group-item) {
+    flex: 1;
+    text-align: center;
 }
