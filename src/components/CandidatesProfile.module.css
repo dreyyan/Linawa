@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap; /* Prevent overflowing */
-    width: 40%;
+
 }
 
 :global(.list-group .list-group-item.list-group-item-action.list-group-item-warning) {
@@ -11,25 +11,29 @@
     color: black !important;
     font-weight: bold;
     text-align: center;
+    width: 100%;
 }
 
 
 /* Header Row */
 :global(.list-group .list-group-item.font-weight-bold) {
     background-color: var(--red);
+    flex: 1;
     color: var(--white, #ffffff);
     text-align: center;
     font-weight: bold;
-    border: none;
+    border: 5px solid black;
 
-    min-width: 30%;
+
 }
 
 /* Candidate Row */
 :global(.list-group) {
     display: flex;
     flex-direction: column;
-    width: 50%;
+
+    width: 100%;
+
 }
 
 /* Same with for all candidates */
@@ -37,8 +41,8 @@
     color: var(--black, #000);
     background-color: var(--light, #f8f9fa);
     border: 1px solid var(--gray, #ddd);
-
-    min-width: 60%;
+    
+    width: 100%;
 }
 
 /* Clickable names */

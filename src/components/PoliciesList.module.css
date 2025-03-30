@@ -1,0 +1,11 @@
+.accordionOpen {
+  /* Decorates the accordions */
+  width: 1500px;
+  text-align: justify;
+  font-size: 25px;
+  --bs-accordion-active-bg: rgba(148, 20, 20, 0.582);
+  --bs-accordion-bg: rgba(238, 163, 163, 0.466);
+  --bs-accordion-btn-padding-x: 500px;
+  --bs-accordion-inner-border-radius: 5px;
+  --bs-accordion-border-color: rgb(56, 54, 54);
+}
