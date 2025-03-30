@@ -10,10 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.8.4",
     "bootstrap": "^5.3.3",
+    "cors": "^2.8.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router-dom": "^7.4.0"
+    "react-router-dom": "^7.4.0",
+    "torch": "^0.2.7",
+    "transformers": "^1.8.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
