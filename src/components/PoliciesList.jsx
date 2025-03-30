@@ -1,8 +1,32 @@
 import React from 'react'
+import {useState} from 'react'
+import axios from 'axios'
 // STYLE
 import styles from './PoliciesList.module.css'
 
 const PoliciesList = () => {
+    const [summaries, setSummaries] = useState({});
+    const [loadingSummaries, setLoadingSummaries] = useState({});
+
+    const handleSummarize = async (policyKey, policyText) =>{
+
+        setLoadingSummaries(prev => ({...prev, [policyKey]: true}));
+        try{
+            const response = await axios.post("http://127.0.0.1:5000/summarize", {
+                text: policyText,
+            });
+            setSummaries(prev =>({
+                ...prev,
+                [policyKey]: response.data.summary,
+            }));
+        }catch(err){
+            console.error("Error summarizing", err);
+        }
+
+        setLoadingSummaries(prev => ({...prev, [policyKey]: false}))
+    }
+
+
     return (
         <div className="accordion" id="accordionExample">
             {/* Democracy and Governance */}
@@ -15,6 +39,7 @@ const PoliciesList = () => {
                         data-bs-target="#collapseOne"
                         aria-expanded="true"
                         aria-controls="collapseOne"
+                        
                     >
                         Democracy and Governance
                     </button>
@@ -22,14 +47,27 @@ const PoliciesList = () => {
                 <div
                     id="collapseOne"
                     className="accordion-collapse collapse show"
-                    data-bs-parent="#accordionExample"
-                >
-                    <div className="accordion-body">
+                    data-bs-parent="#accordionExample">
+                    <div className="accordion-body" >
                         The Philippines follows a representative democracy where
                         citizens elect government officials. The three branches of
                         government (Executive, Legislative, and Judiciary) ensure a
                         system of checks and balances. The Bill of Rights guarantees
                         freedoms such as speech, press, and assembly.
+                        <br />
+                        {
+                            loadingSummaries["vote"] ? (
+                                <button className='btn btn-primary mt-2' disabled>
+                                    Summarizing...
+                                </button>
+                            ) : <button className="btn btn-primary mt-2" onClick={() => handleSummarize("vote", "Voting is a fundamental right and duty of every Filipino citizen. Elections are held regularly for national and local officials. The Commission on Elections oversees election processes to ensure fairness and transparency.")}>
+                            Summarize
+                        </button>
+                        }
+                        
+                        {summaries["vote"] && (
+                            <p className="mt-2"><strong>Summary:</strong> {summaries["vote"]}</p>
+                        )}
                     </div>
                 </div>
             </div>
@@ -48,17 +86,16 @@ const PoliciesList = () => {
                         Right to Vote
                     </button>
                 </h2>
-                <div
-                    id="collapseTwo"
-                    className="accordion-collapse collapse"
-                    data-bs-parent="#accordionExample"
-                >
+                <div id="collapseTwo" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                     <div className="accordion-body">
-                        Voting is a fundamental right and duty of every Filipino citizen
-                        (Article V, 1987 Constitution). Elections are held regularly for
-                        national and local officials (President, Senators, Congressmen,
-                        Governors, Mayors, etc.). The Commission on Elections (COMELEC)
-                        oversees election processes to ensure fairness and transparency.
+                        Voting is a fundamental right and duty of every Filipino citizen (Article V, 1987 Constitution). Elections are held regularly for national and local officials. The Commission on Elections (COMELEC) oversees election processes to ensure fairness and transparency.
+                        <br />
+                        <button className="btn btn-primary mt-2" onClick={() => handleSummarize("vote", "Voting is a fundamental right and duty of every Filipino citizen. Elections are held regularly for national and local officials. The Commission on Elections oversees election processes to ensure fairness and transparency.")}>
+                            Summarize
+                        </button>
+                        {summaries["vote"] && (
+                            <p className="mt-2"><strong>Summary:</strong> {summaries["vote"]}</p>
+                        )}
                     </div>
                 </div>
             </div>
