@@ -41,48 +41,69 @@ const ReportIssues = () => {
     } else {
       alert('Error reporting issue: ' + data.message);
     }
-
+    setCategory("");
+    setDescription("");
+    setUserEmail("");
     
   };
 
   return (
-    <div>
-      <h1>Report Election Issue</h1>
-      <MapComponent onLocationSelect={handleLocationSelect} />
-      <form onSubmit={handleSubmit}>
-        <label>Category:</label>
-        <select value={category}
-        onChange={(e) =>setCategory(e.target.value)}>
-          <option value="">Select Category</option>
-          <option value="vote-buying">Vote Buying</option>
-          <option value="election-fraud">Election Fraud</option>
-          <option value="vote-tampering">Vote Tampering</option>
-          <option value="misinformation">Misinformation</option>
-          <option value="polling-station-problem">Polling Station Problems</option>
-        </select>
-        <br/>
+    <div className="container mt-4">
+      <h1 className="mb-4 text-center">Report Election Issue</h1>
+      <div className="row">
+        <div className="col-md-6">
+          <MapComponent onLocationSelect={handleLocationSelect} />
+        </div>
+        <div className="col-md-6">
+          <form onSubmit={handleSubmit} className="bg-light p-4 rounded shadow-sm">
+            <div className="form-group mb-3">
+              <label htmlFor="category">Category</label>
+              <select
+                id="category"
+                className="form-control"
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                required
+              >
+                <option value="">Select Category</option>
+                <option value="Vote-Buying">Vote Buying</option>
+                <option value="Election-Fraud">Election Fraud</option>
+                <option value="Vote-Tampering">Vote Tampering</option>
+                <option value="Misinformation">Misinformation</option>
+                <option value="Polling-Station-Problem">Polling Station Problems</option>
+              </select>
+            </div>
 
-        <label>Description:</label>
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          required
-        />
-        <br />
+            <div className="form-group mb-3">
+              <label htmlFor="description">Description</label>
+              <textarea
+                id="description"
+                className="form-control"
+                value={description}
+                onChange={(e) => setDescription(e.target.value)}
+                required
+                rows="4"
+              />
+            </div>
 
-        <label>Your Email:</label>
-        <input
-          type="email"
-          value={userEmail}
-          onChange={(e) => setUserEmail(e.target.value)}
-          required
-        />
-        <br />
+            <div className="form-group mb-3">
+              <label htmlFor="userEmail">Your Email</label>
+              <input
+                id="userEmail"
+                type="email"
+                className="form-control"
+                value={userEmail}
+                onChange={(e) => setUserEmail(e.target.value)}
+                required
+              />
+            </div>
 
-        
-
-        <button type="submit">Submit Report</button>
-      </form>
+            <button type="submit" className="btn btn-primary w-100">
+              Submit Report
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
