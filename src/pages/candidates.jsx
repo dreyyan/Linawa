@@ -6,10 +6,8 @@ import CandidatesProfile from "../components/CandidatesProfile.jsx";
 const Candidates = () => {
     return (
         <>
-            <div className="subHeader">
-                <h4 className="pageTitle">CANDIDATES</h4>
-                <CandidatesProfile/>
-            </div>
+            <h4 className="pageTitle">CANDIDATES</h4>
+            <CandidatesProfile/>
         </>
     )
 }
