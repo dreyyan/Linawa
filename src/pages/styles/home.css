@@ -1,0 +1,19 @@
+.flexContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    min-height: 80vh;
+}
+
+.mainPageTitle {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 6rem;
+}
+
+.titleQuote {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}

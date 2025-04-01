@@ -1,13 +1,19 @@
 :root {
-  --blue: #0032A0;
-  --red: #BF0D3E;
+  --blue: #0A3D91;
+  --red: #C8102E;
+  --yellow: #FFC72C;
   --white: #FFFFFF;
-  --yellow: #ffdc72;
   --black: #000000;
 }
 
-.header {
-  background-color: var(--red);
+body {
+  background-image: url("/background-page.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  width: 100vw;
+  height: 100vh;
 }
 
 .pageTitle {
@@ -21,7 +27,7 @@
 
   display: flex;
   justify-content: center;
-
-  padding: 0 fill;
   width: 100%;
+
+  margin: 0;
 }

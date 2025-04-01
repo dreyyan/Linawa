@@ -1,64 +1,69 @@
-/* Horizontal Layout for small screens */
-:global(.list-group.list-group-horizontal-sm) {
+:global(.navbar.bg-body-tertiary) {
+    background-color: rgba(255, 0, 0, 0) !important;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Prevent overflowing */
-
-}
-
-:global(.list-group .list-group-item.list-group-item-action.list-group-item-warning) {
-    /*background-color: var(--yellow) !important;*/
-    color: black !important;
-    font-weight: bold;
-    text-align: center;
-    width: 100%;
-}
-
-
-/* Header Row */
-:global(.list-group .list-group-item.font-weight-bold) {
-    background-color: var(--red);
-    flex: 1;
-    color: var(--white, #ffffff);
-    text-align: center;
-    font-weight: bold;
-    border: 5px solid black;
-
-
-}
-
-/* Candidate Row */
-:global(.list-group) {
-    display: flex;
     flex-direction: column;
-
-    width: 100%;
-
 }
 
-/* Same with for all candidates */
-:global(.list-group-item) {
-    color: var(--black, #000);
-    background-color: var(--light, #f8f9fa);
-    border: 1px solid var(--gray, #ddd);
-    
-    width: 100%;
+/* Search Candidate: */
+:global(.navbar-brand) {
+    color: var(--white) !important;
+    font-weight: bold !important;
+
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+
+    margin: 10px;
+    width: 200px;
+    background-color: #154da6;
 }
 
-/* Clickable names */
-:global(.list-group-item-action) {
-    text-decoration: none;
+/* Form */
+:global(.d-flex) {
+    margin-bottom: 0.5%;
+}
+
+:global(.btn) {
+    background-color: #154da6 !important;
+    color: var(--white) !important;
+    font-weight: bold !important;
+}
+
+:global(.btn:hover) {
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+}
+
+:global(.btn:active) {
+    background-color: #154da6 !important;
+    color: var(--white) !important;
+}
+
+:global(.card) {
+    max-width: 204px;
+    max-height: 400px;
+    border-radius: 20px !important;
+    border: 2px solid #e0e0e0 !important;
+
+    margin: 5% 10%;
+}
+
+:global(.card-body) {
+    display: flex;
+    justify-content: center;
+    padding: 2px 10px !important;
+}
+
+:global(.card-title) {
     font-weight: bold;
+    color: var(--blue) !important;
 }
 
-/* Links */
-:global(.list-group-item-action:hover) {
-    background-color: var(--warning, #ffc107);
-    color: var(--black, #000);
-}
-
-/* Row alignment */
-:global(.list-group-horizontal-sm .list-group-item) {
-    flex: 1;
-    text-align: center;
+:global(.card-img-bottom) {
+    width: 166px !important;
+    height: 166px !important;
+    margin: 10px;
+    object-fit: cover; /* Crop image /wo stretching */
+    border-radius: 16px !important;
 }

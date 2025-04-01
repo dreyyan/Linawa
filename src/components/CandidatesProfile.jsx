@@ -7,104 +7,86 @@ import { Link } from 'react-router-dom'
 const CandidatesProfile = () => {
     // Suggestion: Store in database due to heavy load
     const candidates = [
-        { name: "Jerome Adonis", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Ronnel Arambulo", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Bam Aquino", party: "KANP", alliance: "KiBam" },
-        { name: "Ronnel Arambulo", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Ronnel Arambulo", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Ernesto Arellano", party: "KKK", alliance: "—" },
-        { name: "Roberto Ballon", party: "Independent", alliance: "—" },
-        { name: "Abigail Binay", party: "NPC", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Jimmy Bondoc", party: "PDP", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Bong Revilla", party: "Lakas", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Bonifacio Bosita", party: "Independent", alliance: "Riding-in-tandem Team" },
-        { name: "Arlene Brosas", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Roy Cabonegro", party: "DPP", alliance: "—" },
-        { name: "Allen Capuyan", party: "PPP", alliance: "—" },
-        { name: "Teodoro Casiño", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "France Castro", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Pia Cayetano", party: "Nacionalista", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "David d'Angelo", party: "Bunyog", alliance: "—" },
-        { name: "Angelo de Alban", party: "Independent", alliance: "—" },
-        { name: "Leody de Guzman", party: "PLM", alliance: "—" },
-        { name: "Ronald dela Rosa", party: "PDP", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Mimi Doringo", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Arnel Escobal", party: "PM", alliance: "—" },
-        { name: "Luke Espiritu", party: "PLM", alliance: "—" },
-        { name: "Mody Floranda", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Marc Gamboa", party: "Independent", alliance: "—" },
-        { name: "Bong Go", party: "PDP", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Norberto Gonzales", party: "PDSP", alliance: "—" },
-        { name: "Jesus Hinlo Jr.", party: "PDP", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Gregorio Honasan", party: "Reform PH", alliance: "—" },
-        { name: "Relly Jose Jr.", party: "KBL", alliance: "—" },
-        { name: "Panfilo Lacson", party: "Independent", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Raul Lambino", party: "PDP", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Lito Lapid", party: "NPC", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Wilbert T. Lee", party: "Aksyon", alliance: "—" },
-        { name: "Amirah Lidasan", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Rodante Marcoleta", party: "Independent", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Imee Marcos", party: "Nacionalista", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Norman Marquez", party: "Independent", alliance: "—" },
-        { name: "Eric Martinez", party: "Independent", alliance: "—" },
-        { name: "Richard Mata", party: "Independent", alliance: "—" },
-        { name: "Sonny Matula", party: "WPP", alliance: "—" },
-        { name: "Liza Maza", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Heidi Mendoza", party: "Independent", alliance: "—" },
-        { name: "Jose Montemayor Jr.", party: "Independent", alliance: "—" },
-        { name: "Subair Mustapha", party: "WPP", alliance: "—" },
-        { name: "Jose Olivar", party: "Independent", alliance: "—" },
-        { name: "Willie Ong", party: "Aksyon", alliance: "—" },
-        { name: "Manny Pacquiao", party: "PFP", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Francis Pangilinan", party: "Liberal", alliance: "KiBam" },
-        { name: "Ariel Querubin", party: "Nacionalista", alliance: "Riding-in-tandem Team" },
-        { name: "Apollo Quiboloy", party: "Independent", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Danilo Ramos", party: "Makabayan", alliance: "Oposisyon ng Bayan" },
-        { name: "Willie Revillame", party: "Independent", alliance: "—" },
-        { name: "Vic Rodriguez", party: "Independent", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Nur-Ana Sahidulla", party: "Independent", alliance: "—" },
-        { name: "Phillip Salvador", party: "PDP", alliance: "Partido Demokratiko Pilipino" },
-        { name: "Tito Sotto", party: "NPC", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Michael Tapado", party: "PM", alliance: "—" },
-        { name: "Francis Tolentino", party: "PFP", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Ben Tulfo", party: "Independent", alliance: "—" },
-        { name: "Erwin Tulfo", party: "Lakas", alliance: "Alyansa para sa Bagong Pilipinas" },
-        { name: "Mar Valbuena", party: "Independent", alliance: "—" },
-        { name: "Leandro Verceles Jr.", party: "Independent", alliance: "—" },
-        { name: "Camille Villar", party: "Nacionalista", alliance: "Alyansa para sa Bagong Pilipinas" }
+        { "name": "Jerome Adonis", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/jerome-adonis.webp" },
+        { "name": "Ronnel Arambulo", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/ronnel-arambulo.webp" },
+        { "name": "Bam Aquino", "party": "KANP", "alliance": "KiBam", "image": "/bam-aquino.jpg" },
+        { "name": "Ernesto Arellano", "party": "KKK", "alliance": "—", "image": "/ernesto-arellano.webp" },
+        { "name": "Roberto Ballon", "party": "Independent", "alliance": "—", "image": "/roberto-ballon.jpg" },
+        { "name": "Abigail Binay", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/abigail-binay.jpg" },
+        { "name": "Jimmy Bondoc", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jimmy-bondoc.jpg" },
+        { "name": "Bong Revilla", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/bong-revilla.jpg" },
+        { "name": "Bonifacio Bosita", "party": "Independent", "alliance": "Riding-in-tandem Team", "image": "/bonifacio-bosita.jpg" },
+        { "name": "Arlene Brosas", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/arlene-brosas.jpg" },
+        { "name": "Roy Cabonegro", "party": "DPP", "alliance": "—", "image": "/roy-cabonegro.jpg" },
+        { "name": "Allen Capuyan", "party": "PPP", "alliance": "—", "image": "/allen-capuyan.jpg" },
+        { "name": "Teodoro Casiño", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/teodoro-casino.jpg" },
+        { "name": "France Castro", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/france-castro.jpg" },
+        { "name": "Pia Cayetano", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/pia-cayetano.jpg" },
+        { "name": "David d'Angelo", "party": "Bunyog", "alliance": "—", "image": "/david-dangelo.jpg" },
+        { "name": "Angelo de Alban", "party": "Independent", "alliance": "—", "image": "/angelo-de-alban.jpg" },
+        { "name": "Leody de Guzman", "party": "PLM", "alliance": "—", "image": "/leody-de-guzman.jpg" },
+        { "name": "Ronald dela Rosa", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/ronald-dela-rosa.jpg" },
+        { "name": "Mimi Doringo", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mimi-doringo.jpg" },
+        { "name": "Arnel Escobal", "party": "PM", "alliance": "—", "image": "/arnel-escobal.jpg" },
+        { "name": "Luke Espiritu", "party": "PLM", "alliance": "—", "image": "/luke-espiritu.jpg" },
+        { "name": "Mody Floranda", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mody-floranda.jpg" },
+        { "name": "Marc Gamboa", "party": "Independent", "alliance": "—", "image": "/marc-gamboa.jpg" },
+        { "name": "Bong Go", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/bong-go.jpg" },
+        { "name": "Norberto Gonzales", "party": "PDSP", "alliance": "—", "image": "/norberto-gonzales.jpg" },
+        { "name": "Jesus Hinlo Jr.", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jesus-hinlo-jr.jpg" },
+        { "name": "Gregorio Honasan", "party": "Reform PH", "alliance": "—", "image": "/gregorio-honasan.jpg" },
+        { "name": "Relly Jose Jr.", "party": "KBL", "alliance": "—", "image": "/relly-jose-jr.jpg" },
+        { "name": "Panfilo Lacson", "party": "Independent", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/panfilo-lacson.jpg" },
+        { "name": "Raul Lambino", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/raul-lambino.jpg" },
+        { "name": "Lito Lapid", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/lito-lapid.jpg" },
+        { "name": "Wilbert T. Lee", "party": "Aksyon", "alliance": "—", "image": "/wilbert-t-lee.jpg" },
+        { "name": "Amirah Lidasan", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/amirah-lidasan.jpg" },
+        { "name": "Rodante Marcoleta", "party": "Independent", "alliance": "Partido Demokratiko Pilipino", "image": "/rodante-marcoleta.jpg" },
+        { "name": "Imee Marcos", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/imee-marcos.jpg" },
+        { "name": "Norman Marquez", "party": "Independent", "alliance": "—", "image": "/norman-marquez.jpg" },
+        { "name": "Eric Martinez", "party": "Independent", "alliance": "—", "image": "/eric-martinez.jpg" },
+        { "name": "Richard Mata", "party": "Independent", "alliance": "—", "image": "/richard-mata.jpg" },
+        { "name": "Sonny Matula", "party": "WPP", "alliance": "—", "image": "/sonny-matula.jpg" },
+        { "name": "Liza Maza", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/liza-maza.jpg" },
+        { "name": "Heidi Mendoza", "party": "Independent", "alliance": "—", "image": "/heidi-mendoza.jpg" },
+        { "name": "Jose Montemayor Jr.", "party": "Independent", "alliance": "—", "image": "/jose-montemayor-jr.jpg" },
+        { "name": "Ben Tulfo", "party": "Independent", "alliance": "—", "image": "/ben-tulfo.jpg" },
+        { "name": "Erwin Tulfo", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/erwin-tulfo.jpg" },
+        { "name": "Camille Villar", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/camille-villar.jpg" }
     ];
 
-    // To store different sizes of a list group
-    const sizeClasses = [
-        "list-group-horizontal-sm",
-        "list-group-horizontal-md",
-        "list-group-horizontal-lg",
-        "list-group-horizontal-xl",
-        "list-group-horizontal-xxl"
-    ];
 
     return (
         <>
-            <div className="list-group">
-                <ul className="list-group list-group-horizontal-sm" style={{ minWidth: "100%" }}>
-                    <li className="list-group-item font-weight-bold">CANDIDATE</li>
-                    <li className="list-group-item font-weight-bold">PARTY</li>
-                    <li className="list-group-item font-weight-bold">ALLIANCE</li>
-                </ul>
-                {
-                    // Dynamic mapping
-                    candidates.map((candidate, index) => (
-                        <ul key={index} className={`list-group ${sizeClasses[index % sizeClasses.length]}`}>
-                            <a href="#" className="list-group-item list-group-item-action list-group-item-warning">
-                                {candidate.name}
-                            </a>
-                            <li className="list-group-item">{candidate.party}</li>
-                            <li className="list-group-item">{candidate.alliance}</li>
+            <nav class="navbar bg-body-tertiary">
+                <a class="navbar-brand">Search Candidate:</a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="enter keyword..." aria-label="Search"/>
+                    <button class="btn" type="submit">Search</button>
+                </form>
+            </nav>
+
+            <div className="row">
+                {candidates.map((candidate, index) => (
+                    <div className="col-md-2 mb-3" key={index}>
+                    <div className="card">
+                        <img src={candidate.image} className="card-img-bottom" alt={`${candidate.name}`}/>
+                        <div className="card-body">
+                        <h5 className="card-title">{candidate.name}</h5>
+                        <p className="card-text"></p>
+                        </div>
+                        <ul className="list-group list-group-flush">
+                        <li className="list-group-item">{candidate.party}</li>
+                        <li className="list-group-item">{candidate.alliance}</li>
                         </ul>
-                    ))
-                }
+                        <div className="card-body">
+                        <a href="#" className="card-link">View</a>
+                        </div>
+                    </div>
+                    </div>
+                ))}
             </div>
         </>
-    )
+    );
 }
 export default CandidatesProfile
