@@ -1,22 +1,45 @@
+/* ICONS */
+:global(.bi.bi-search) {
+    background-color: white;
+}
+
+:global(.col-md-2.mb-1) {
+display: flex;
+justify-content: space-evenly;
+}
+
+
 :global(.navbar.bg-body-tertiary) {
     background-color: rgba(255, 0, 0, 0) !important;
     display: flex;
     justify-content: center;
-    flex-direction: column;
 }
 
-/* Search Candidate: */
-:global(.navbar-brand) {
-    color: var(--white) !important;
-    font-weight: bold !important;
+/* SEARCH BAR */
+:global(.form-control.me-2) {
+    border-radius: 20px !important;
+    height: 40px;
+    margin: 0;
+    padding: 8%;
+}
 
+:global(.searchArea) {
     display: flex;
     justify-content: center;
-    border-radius: 10px;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 80px !important;
 
-    margin: 10px;
-    width: 200px;
+    margin: 1%;
+
+    width: 15%;
     background-color: #154da6;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+} 
+
+:global(input.form-control.me-2) {
+    margin-right: 0rem !important;
+    margin: 10px 0px;
 }
 
 /* Form */
@@ -42,19 +65,34 @@
 
 /* CARD COMPONENT */
 :global(.card) {
-    width: 200px;
-    border-radius: 20px !important;
+    width: 210px;
+    border-radius: 8px !important;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
+    padding-top: 4%;
 
-    background: rgba(10, 61, 145, 0.4) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+    background: rgba(18, 77, 173, 0.8) !important;
+    box-shadow: 0 0px 20px rgba(10, 61, 145, 0.8) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
-    border: 2px solid #0a3d9133 !important;
+    border: 2px solid rgba(10, 61, 145, 1) !important;
+}
+
+:global(.cardLink) {
+    border-radius: 8px;
+    background-color: #154da6;
+    text-decoration: none;
+}
+
+:global(.cardLink:hover) {
+    background-color: rgba(71, 130, 225, 0.8);
+}
+
+:global(.cardLink:active) {
+    background-color: rgb(255, 255, 255);
 }
 
 /* PARTY/ALLIANCE CONTAINER */
@@ -62,33 +100,38 @@
     color: var(--white) !important;
     font-weight: bold;
 
-    width: 200px;
+    width: 210px;
     word-wrap: break-word;
     overflow-wrap: break-word;
     white-space: normal;
     white-space: normal !important;
 
-    background: rgba(10, 61, 145, 0.6) !important;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    background: rgba(255, 199, 44, 0.9) !important;
+    box-shadow: 0px 0px 10px rgba(255, 199, 44, 1) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
-    border: 2px solid rgba(10, 61, 145, 0.4) !important;
+    border: 2px solid rgba(255, 199, 44, 1) !important;
+
+    padding: 4% 4% !important;
+    display: flex !important;
+    align-content: center;
 }
 
+/* PILLS */
+:global(.rounded-pill) {
+    font-size: 0.7rem !important;
+}
+
+/* CARD BODY */
 :global(.card-body) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2px 0 0 2px !important;
+
 }
 
 /* NAME OF CANDIDATE */
 :global(.card-title) {
     font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: var(--white) !important;
-
-    text-shadow: 1px 1px 0px rgba(10, 61, 145, 0.8);
 }
 
 /* IMAGE OF CANDIDATE */
@@ -98,6 +141,7 @@
     margin: 10px;
     object-fit: cover; /* Crop image /wo stretching */
     border-radius: 16px !important;
+    border: 2px groove rgba(10, 61, 145, 1) !important;
 }
 
 /* LINK */
