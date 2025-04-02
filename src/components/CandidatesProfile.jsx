@@ -1,114 +1,100 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
 // STYLE
-import styles from './CandidatesProfile.module.css'
+import styles from "./CandidatesProfile.module.css";
 // ROUTING
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
+// DATA
+import candidates from "./CandidatesData"
 
 const CandidatesProfile = () => {
-    // Suggestion: Store in database due to heavy load
-    const candidates = [
-        { "name": "Jerome Adonis", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/jerome-adonis.webp" },
-        { "name": "Ronnel Arambulo", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/ronnel-arambulo.webp" },
-        { "name": "Bam Aquino", "party": "KANP", "alliance": "KiBam", "image": "/bam-aquino.jpg" },
-        { "name": "Ernesto Arellano", "party": "KKK", "alliance": "—", "image": "/ernesto-arellano.webp" },
-        { "name": "Roberto Ballon", "party": "Independent", "alliance": "—", "image": "/roberto-ballon.jpg" },
-        { "name": "Abigail Binay", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/abigail-binay.jpg" },
-        { "name": "Jimmy Bondoc", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jimmy-bondoc.jpg" },
-        { "name": "Bong Revilla", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/bong-revilla.JPG" },
-        { "name": "Bonifacio Bosita", "party": "Independent", "alliance": "Riding-in-tandem Team", "image": "/bonifacio-bosita.jpg" },
-        { "name": "Arlene Brosas", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/arlene-brosas.jpg" },
-        { "name": "Roy Cabonegro", "party": "DPP", "alliance": "—", "image": "/roy-cabonegro.jpg" },
-        { "name": "Allen Capuyan", "party": "PPP", "alliance": "—", "image": "/allen-capuyan.webp" },
-        { "name": "Teodoro Casiño", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/teodoro-casino.jpg" },
-        { "name": "France Castro", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/france-castro.jpg" },
-        { "name": "Pia Cayetano", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/pia-cayetano.jpg" },
-        { "name": "David d'Angelo", "party": "Bunyog", "alliance": "—", "image": "/david-dangelo.webp" },
-        { "name": "Angelo de Alban", "party": "Independent", "alliance": "—", "image": "/angelo-de-alban.webp" },
-        { "name": "Leody de Guzman", "party": "PLM", "alliance": "—", "image": "/leody-de-guzman.png" },
-        { "name": "Ronald dela Rosa", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/ronald-dela-rosa.jpg" },
-        { "name": "Mimi Doringo", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mimi-doringo.webp" },
-        { "name": "Arnel Escobal", "party": "PM", "alliance": "—", "image": "/arnel-escobal.jpg" },
-        { "name": "Luke Espiritu", "party": "PLM", "alliance": "—", "image": "/luke-espiritu.webp" },
-        { "name": "Mody Floranda", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mody-floranda.webp" },
-        { "name": "Marc Gamboa", "party": "Independent", "alliance": "—", "image": "/marc-gamboa.webp" },
-        { "name": "Bong Go", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/bong-go.webp" },
-        { "name": "Norberto Gonzales", "party": "PDSP", "alliance": "—", "image": "/norberto-gonzales.jpg" },
-        { "name": "Jesus Hinlo Jr.", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jesus-hinlo-jr.webp" },
-        { "name": "Jesus Hinlo Jr.", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jesus-hinlo-jr.webp" },
-        { "name": "Gregorio Honasan", "party": "Reform PH", "alliance": "—", "image": "/gregorio-honasan.jpg" },
-        { "name": "Relly Jose Jr.", "party": "KBL", "alliance": "—", "image": "/relly-jose-jr.webp" },
-        { "name": "Relly Jose Jr.", "party": "KBL", "alliance": "—", "image": "/relly-jose-jr.webp" },
-        { "name": "Panfilo Lacson", "party": "Independent", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/panfilo-lacson.jpg" },
-        { "name": "Raul Lambino", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/raul-lambino.webp" },
-        { "name": "Lito Lapid", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/lito-lapid.webp" },
-        { "name": "Wilbert T. Lee", "party": "Aksyon", "alliance": "—", "image": "/wilbert-t-lee.png" },
-        { "name": "Amirah Lidasan", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/amirah-lidasan.webp" },
-        { "name": "Rodante Marcoleta", "party": "Independent", "alliance": "Partido Demokratiko Pilipino", "image": "/rodante-marcoleta.webp" },
-        { "name": "Imee Marcos", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/imee-marcos.jpg" },
-        { "name": "Norman Marquez", "party": "Independent", "alliance": "—", "image": "/norman-marquez.webp" },
-        { "name": "Eric Martinez", "party": "Independent", "alliance": "—", "image": "/eric-martinez.jpg" },
-        { "name": "Richard Mata", "party": "Independent", "alliance": "—", "image": "/richard-mata.webp" },
-        { "name": "Sonny Matula", "party": "WPP", "alliance": "—", "image": "/sonny-matula.webp" },
-        { "name": "Liza Maza", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/liza-maza.webp" },
-        { "name": "Heidi Mendoza", "party": "Independent", "alliance": "—", "image": "/heidi-mendoza.webp" },
-        { "name": "Jose Montemayor Jr.", "party": "Independent", "alliance": "—", "image": "/jose-montemayor-jr.jpg" },
-        { "name": "Ben Tulfo", "party": "Independent", "alliance": "—", "image": "/ben-tulfo.webp" },
-        { "name": "Erwin Tulfo", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/erwin-tulfo.jpg" },
-        { "name": "Camille Villar", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/camille-villar.jpg" }
-    ];
+  // Set badge colors according to party
+  const partyColors = {
+    Independent: "text-bg-dark",
+    PDP: "text-bg-success",
+    Nacionalista: "text-bg-primary",
+    Makabayan: "text-bg-danger",
+    NPC: "text-bg-light",
+    PLM: "text-bg-secondary",
+    Lakas: "text-bg-info",
+  };
 
-    // Set badge colors according to party
-    const partyColors = {
-        "Independent": "text-bg-dark",
-        "PDP": "text-bg-success",
-        "Nacionalista": "text-bg-warning",
-        "Makabayan": "text-bg-danger",
-        "NPC": "text-bg-light",
-        "PLM": "text-bg-secondary",
-        "Lakas": "text-bg-info"
-    };
+  // Set badge colors according to alliance
+  const allianceColors = {
+    "Alyansa para sa Bagong Pilipinas": "text-bg-primary",
+    KiBam: "text-bg-info",
+    "Oposisyon ng Bayan": "text-bg-danger",
+    "Partido Demokratiko Pilipino": "text-bg-success",
+    "Riding-in-tandem Team": "text-bg-secondary",
+    "-": "text-bg-dark",
+  };
 
-    // Set badge colors according to alliance
-    const allianceColors = {
-        "Alyansa para sa Bagong Pilipinas": "text-bg-danger",
-        "KiBam": "text-bg-info",
-        "Oposisyon ng Bayan": "text-bg-warning",
-        "Partido Demokratiko Pilipino": "text-bg-success",
-        "Riding-in-tandem Team": "text-bg-secondary",
-        "-": "text-bg-dark"
-    }
+  // Real-time search filtering
+  const [searchTerm, setSearchTerm] = useState("");
+  const filteredCandidates = candidates.filter((candidate) =>
+    candidate.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
-    return (
-        <>
-            <nav class="navbar bg-body-tertiary">
-                <a class="navbar-brand">Search Candidate:</a>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="enter keyword..." aria-label="Search"/>
-                    <button class="btn" type="submit">Search</button>
-                </form>
-            </nav>
+  return (
+    <>
+      <nav class="navbar bg-body-tertiary">
+        <div className="searchArea">
+            <form class="d-flex" role="search">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="search for..."
+            aria-label="Search"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </form>
+        </div>
+      </nav>
 
-            <div className="row">
-                {candidates.map((candidate, index) => (
-                    <div className="col-md-2 mb-3" key={index}>
-                    <div className="card">
-                        <img src={candidate.image} className="card-img-bottom" alt={`${candidate.name}`}/>
-                        <div className="card-body">
-                        <h5 className="card-title">{candidate.name}</h5>
-                        <p className="card-text"></p>
-                        </div>
-                        <ul className="list-group list-group-flush">
-                        <li className="list-group-item"><span className={`badge rounded-pill ${partyColors[candidate.party]}`}>{candidate.party}</span></li>
-                        <li className="list-group-item"><span className={`badge rounded-pill ${allianceColors[candidate.alliance]}`}>{candidate.alliance}</span></li>
-                        <div className="card-body">
-                        <a href="#" className="card-link">View Profile</a>
-                        </div>
-                        </ul>
-                    </div>
-                    </div>
-                ))}
+      <div className="row">
+        {filteredCandidates.length > 0 ? (
+          filteredCandidates.map((candidate, index) => (
+            <div className="col-md-2 mb-1" key={index}>
+              <Link to={`/pages/candidate-profiles/${encodeURIComponent(candidate.name)}`} className="cardLink">
+                <div className="card">
+                  <img
+                    src={candidate.image}
+                    className="card-img-bottom"
+                    alt={candidate.name}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{candidate.name}</h5>
+                  </div>
+                  <ul className="list-group list-group-flush">
+                    <li className="list-group-item">
+                      <span
+                        className={`badge rounded-pill ${
+                          partyColors[candidate.party] ?? "text-bg-light"
+                        }`}
+                      >
+                        {candidate.party}
+                      </span>
+                    </li>
+                    <li className="list-group-item">
+                      <span
+                        className={`badge rounded-pill ${
+                          allianceColors[candidate.alliance] ?? "text-bg-dark"
+                        }`}
+                      >
+                        {candidate.alliance}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </Link>
             </div>
-        </>
-    );
-}
-export default CandidatesProfile
+          ))
+        ) : (
+          <p className="text-center mt-3">No candidates found.</p>
+        )}
+      </div>
+    </>
+  );
+};
+export default CandidatesProfile;

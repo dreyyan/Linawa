@@ -1,6 +1,5 @@
-.accordionOpen {
-  /* Decorates the accordions */
-  width: 1500px;
+:global(.accordion) {  /* Decorates the accordions */
+  width: 1000px;
   text-align: justify;
   font-size: 25px;
   --bs-accordion-active-bg: rgba(148, 20, 20, 0.582);

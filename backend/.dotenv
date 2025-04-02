@@ -1,3 +1,4 @@
 PORT=5555
 FIREBASE_SERVICE_ACCOUNT=privateKey.json
 FIREBASE_DATABASE_URL=https://voteph-democratech.firebaseio.com
+GNEWS_APIKEY = 6b46c68d197eb59724c7affbd1c271ce

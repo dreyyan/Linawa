@@ -1,6 +1,6 @@
 import React from 'react'
 import './styles/about-us.css'
-import ReportIssues from '../components/ReportIssues'
+import ReportIssues from "../components/ReportIssues"
 
 const AboutUs = () => {
     return (

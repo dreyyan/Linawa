@@ -31,3 +31,7 @@ body {
 
   margin: 0;
 }
+
+strong {
+  color: var(--white) !important;
+}
