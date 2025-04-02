@@ -14,47 +14,67 @@ const CandidatesProfile = () => {
         { "name": "Roberto Ballon", "party": "Independent", "alliance": "—", "image": "/roberto-ballon.jpg" },
         { "name": "Abigail Binay", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/abigail-binay.jpg" },
         { "name": "Jimmy Bondoc", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jimmy-bondoc.jpg" },
-        { "name": "Bong Revilla", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/bong-revilla.jpg" },
+        { "name": "Bong Revilla", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/bong-revilla.JPG" },
         { "name": "Bonifacio Bosita", "party": "Independent", "alliance": "Riding-in-tandem Team", "image": "/bonifacio-bosita.jpg" },
         { "name": "Arlene Brosas", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/arlene-brosas.jpg" },
         { "name": "Roy Cabonegro", "party": "DPP", "alliance": "—", "image": "/roy-cabonegro.jpg" },
-        { "name": "Allen Capuyan", "party": "PPP", "alliance": "—", "image": "/allen-capuyan.jpg" },
+        { "name": "Allen Capuyan", "party": "PPP", "alliance": "—", "image": "/allen-capuyan.webp" },
         { "name": "Teodoro Casiño", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/teodoro-casino.jpg" },
         { "name": "France Castro", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/france-castro.jpg" },
         { "name": "Pia Cayetano", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/pia-cayetano.jpg" },
-        { "name": "David d'Angelo", "party": "Bunyog", "alliance": "—", "image": "/david-dangelo.jpg" },
-        { "name": "Angelo de Alban", "party": "Independent", "alliance": "—", "image": "/angelo-de-alban.jpg" },
-        { "name": "Leody de Guzman", "party": "PLM", "alliance": "—", "image": "/leody-de-guzman.jpg" },
+        { "name": "David d'Angelo", "party": "Bunyog", "alliance": "—", "image": "/david-dangelo.webp" },
+        { "name": "Angelo de Alban", "party": "Independent", "alliance": "—", "image": "/angelo-de-alban.webp" },
+        { "name": "Leody de Guzman", "party": "PLM", "alliance": "—", "image": "/leody-de-guzman.png" },
         { "name": "Ronald dela Rosa", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/ronald-dela-rosa.jpg" },
-        { "name": "Mimi Doringo", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mimi-doringo.jpg" },
+        { "name": "Mimi Doringo", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mimi-doringo.webp" },
         { "name": "Arnel Escobal", "party": "PM", "alliance": "—", "image": "/arnel-escobal.jpg" },
-        { "name": "Luke Espiritu", "party": "PLM", "alliance": "—", "image": "/luke-espiritu.jpg" },
-        { "name": "Mody Floranda", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mody-floranda.jpg" },
-        { "name": "Marc Gamboa", "party": "Independent", "alliance": "—", "image": "/marc-gamboa.jpg" },
-        { "name": "Bong Go", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/bong-go.jpg" },
+        { "name": "Luke Espiritu", "party": "PLM", "alliance": "—", "image": "/luke-espiritu.webp" },
+        { "name": "Mody Floranda", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/mody-floranda.webp" },
+        { "name": "Marc Gamboa", "party": "Independent", "alliance": "—", "image": "/marc-gamboa.webp" },
+        { "name": "Bong Go", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/bong-go.webp" },
         { "name": "Norberto Gonzales", "party": "PDSP", "alliance": "—", "image": "/norberto-gonzales.jpg" },
-        { "name": "Jesus Hinlo Jr.", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jesus-hinlo-jr.jpg" },
+        { "name": "Jesus Hinlo Jr.", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/jesus-hinlo-jr.webp" },
         { "name": "Gregorio Honasan", "party": "Reform PH", "alliance": "—", "image": "/gregorio-honasan.jpg" },
-        { "name": "Relly Jose Jr.", "party": "KBL", "alliance": "—", "image": "/relly-jose-jr.jpg" },
+        { "name": "Relly Jose Jr.", "party": "KBL", "alliance": "—", "image": "/relly-jose-jr.webp" },
         { "name": "Panfilo Lacson", "party": "Independent", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/panfilo-lacson.jpg" },
-        { "name": "Raul Lambino", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/raul-lambino.jpg" },
-        { "name": "Lito Lapid", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/lito-lapid.jpg" },
-        { "name": "Wilbert T. Lee", "party": "Aksyon", "alliance": "—", "image": "/wilbert-t-lee.jpg" },
-        { "name": "Amirah Lidasan", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/amirah-lidasan.jpg" },
-        { "name": "Rodante Marcoleta", "party": "Independent", "alliance": "Partido Demokratiko Pilipino", "image": "/rodante-marcoleta.jpg" },
+        { "name": "Raul Lambino", "party": "PDP", "alliance": "Partido Demokratiko Pilipino", "image": "/raul-lambino.webp" },
+        { "name": "Lito Lapid", "party": "NPC", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/lito-lapid.webp" },
+        { "name": "Wilbert T. Lee", "party": "Aksyon", "alliance": "—", "image": "/wilbert-t-lee.png" },
+        { "name": "Amirah Lidasan", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/amirah-lidasan.webp" },
+        { "name": "Rodante Marcoleta", "party": "Independent", "alliance": "Partido Demokratiko Pilipino", "image": "/rodante-marcoleta.webp" },
         { "name": "Imee Marcos", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/imee-marcos.jpg" },
-        { "name": "Norman Marquez", "party": "Independent", "alliance": "—", "image": "/norman-marquez.jpg" },
+        { "name": "Norman Marquez", "party": "Independent", "alliance": "—", "image": "/norman-marquez.webp" },
         { "name": "Eric Martinez", "party": "Independent", "alliance": "—", "image": "/eric-martinez.jpg" },
-        { "name": "Richard Mata", "party": "Independent", "alliance": "—", "image": "/richard-mata.jpg" },
-        { "name": "Sonny Matula", "party": "WPP", "alliance": "—", "image": "/sonny-matula.jpg" },
-        { "name": "Liza Maza", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/liza-maza.jpg" },
-        { "name": "Heidi Mendoza", "party": "Independent", "alliance": "—", "image": "/heidi-mendoza.jpg" },
+        { "name": "Richard Mata", "party": "Independent", "alliance": "—", "image": "/richard-mata.webp" },
+        { "name": "Sonny Matula", "party": "WPP", "alliance": "—", "image": "/sonny-matula.webp" },
+        { "name": "Liza Maza", "party": "Makabayan", "alliance": "Oposisyon ng Bayan", "image": "/liza-maza.webp" },
+        { "name": "Heidi Mendoza", "party": "Independent", "alliance": "—", "image": "/heidi-mendoza.webp" },
         { "name": "Jose Montemayor Jr.", "party": "Independent", "alliance": "—", "image": "/jose-montemayor-jr.jpg" },
-        { "name": "Ben Tulfo", "party": "Independent", "alliance": "—", "image": "/ben-tulfo.jpg" },
+        { "name": "Ben Tulfo", "party": "Independent", "alliance": "—", "image": "/ben-tulfo.webp" },
         { "name": "Erwin Tulfo", "party": "Lakas", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/erwin-tulfo.jpg" },
         { "name": "Camille Villar", "party": "Nacionalista", "alliance": "Alyansa para sa Bagong Pilipinas", "image": "/camille-villar.jpg" }
     ];
 
+    // Set badge colors according to party
+    const partyColors = {
+        "Independent": "text-bg-dark",
+        "PDP": "text-bg-success",
+        "Nacionalista": "text-bg-warning",
+        "Makabayan": "text-bg-danger",
+        "NPC": "text-bg-light",
+        "PLM": "text-bg-secondary",
+        "Lakas": "text-bg-info"
+    };
+
+    // Set badge colors according to alliance
+    const allianceColors = {
+        "Alyansa para sa Bagong Pilipinas": "text-bg-danger",
+        "KiBam": "text-bg-info",
+        "Oposisyon ng Bayan": "text-bg-warning",
+        "Partido Demokratiko Pilipino": "text-bg-success",
+        "Riding-in-tandem Team": "text-bg-secondary",
+        "-": "text-bg-dark"
+    }
 
     return (
         <>
@@ -76,12 +96,12 @@ const CandidatesProfile = () => {
                         <p className="card-text"></p>
                         </div>
                         <ul className="list-group list-group-flush">
-                        <li className="list-group-item">{candidate.party}</li>
-                        <li className="list-group-item">{candidate.alliance}</li>
-                        </ul>
+                        <li className="list-group-item"><span className={`badge rounded-pill ${partyColors[candidate.party]}`}>{candidate.party}</span></li>
+                        <li className="list-group-item"><span className={`badge rounded-pill ${allianceColors[candidate.alliance]}`}>{candidate.alliance}</span></li>
                         <div className="card-body">
-                        <a href="#" className="card-link">View</a>
+                        <a href="#" className="card-link">View Profile</a>
                         </div>
+                        </ul>
                     </div>
                     </div>
                 ))}
