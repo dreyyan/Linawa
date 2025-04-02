@@ -1,3 +1,0 @@
-PORT=5555
-FIREBASE_SERVICE_ACCOUNT=privateKey.json
-FIREBASE_DATABASE_URL=https://voteph-democratech.firebaseio.com
