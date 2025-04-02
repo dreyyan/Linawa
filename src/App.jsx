@@ -25,6 +25,8 @@ function Home() {
         <Header/>
       <div className="routes">
           <Routes>
+                      {/* Redirect to LoginPage by default */}
+          <Route path="/" element={<LoginPage />} />
             <Route path="/pages/candidates" element={<Candidates />} />
             <Route path="/candidates/:id" element={<CandidatesProfile />} />
             <Route path="/pages/candidate-profiles/:name" element={<CandidateDetail />} />
