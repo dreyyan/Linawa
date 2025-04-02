@@ -14,20 +14,7 @@ const getNews = async (req, res) => {
   const response = await fetch(url);
   const data = await response.json();
 
-  articles = data.articles;
-
-  for (i = 0; i < articles.length; i++) {
-    // articles[i].title
-    console.log("Title: " + articles[i]["title"]);
-    // articles[i].description
-    console.log("Description: " + articles[i]["description"]);
-    // You can replace {property} below with any of the article properties returned by the API.
-    // articles[i].{property}
-    // console.log(articles[i]['{property}']);
-
-    // Delete this line to display all the articles returned by the request. Currently only the first article is displayed.
-    break;
-  }
+  res.json(data.articles);
 };
 
 module.exports = { getNews };
