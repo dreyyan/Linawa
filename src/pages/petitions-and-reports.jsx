@@ -1,12 +1,12 @@
 import React from 'react'
-import './styles/petitions-and-polls.css'
+import './styles/petitions-and-reports.css'
 // COMPONENTS
 import PetitionForm from "../components/PetitionForm.jsx";
 
 const PetitionsPolls = () => {
     return (
         <div className="subHeader">
-            <h4 className="pageTitle">PETITIONS & POLLS</h4>
+            <h4 className="pageTitle">PETITIONS & REPORTS</h4>
             <PetitionForm/>
         </div>
     )

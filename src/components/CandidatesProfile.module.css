@@ -1,151 +1,274 @@
 /* ICONS */
 :global(.bi.bi-search) {
-    background-color: white;
+  background-color: white;
 }
 
 :global(.col-md-2.mb-1) {
-display: flex;
-justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-
 :global(.navbar.bg-body-tertiary) {
-    background-color: rgba(255, 0, 0, 0) !important;
-    display: flex;
-    justify-content: center;
+  background-color: transparent !important;
 }
 
 /* SEARCH BAR */
 :global(.form-control.me-2) {
-    border-radius: 20px !important;
-    height: 40px;
-    margin: 0;
-    padding: 8%;
+  border-radius: 20px !important;
+  height: 40px;
+  margin: 0;
+  padding: 8%;
 }
 
 :global(.searchArea) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    border-radius: 80px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    margin: 1%;
+  min-height: 40% !important;
+  width: 100%;
+  background-color: #154da6;
 
-    width: 15%;
-    background-color: #154da6;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-} 
+  background: rgb(27, 89, 190) !important;
 
-:global(input.form-control.me-2) {
-    margin-right: 0rem !important;
-    margin: 10px 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Form */
+:global(.filterText) {
+  color: var(--white) !important;
+  margin: 0 0 0 4% !important;
+}
+
+/* Filter Dropdown */
+:global(.form-select) {
+  width: clamp(10%, 12%, 60%) !important;
+  max-height: 1% !important;
+  margin: 1% 0 1% 1%;
+}
+
+:global(input.form-control.me-2) {
+
+}
+
+/* FORM */
 :global(.d-flex) {
-    margin-bottom: 0.5%;
+  margin-bottom: 0.5%;
 }
 
 :global(.btn) {
-    background-color: #154da6 !important;
-    color: var(--white) !important;
-    font-weight: bold !important;
+  background-color: #154da6 !important;
+  color: white !important;
+  font-weight: bold !important;
 }
 
 :global(.btn:hover) {
-    background-color: var(--blue) !important;
-    color: var(--white) !important;
+  background-color: var(--blue) !important;
+  color: white !important;
 }
 
 :global(.btn:active) {
-    background-color: #154da6 !important;
-    color: var(--white) !important;
+  background-color: #154da6 !important;
+  color: white !important;
 }
 
-/* CARD COMPONENT */
-:global(.card) {
-    width: 210px;
-    border-radius: 8px !important;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-top: 4%;
-
-    background: rgba(18, 77, 173, 0.8) !important;
-    box-shadow: 0 0px 20px rgba(10, 61, 145, 0.8) !important;
-    backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(5px) !important;
-    border: 2px solid rgba(10, 61, 145, 1) !important;
+:global(.cardContainer) {
+  padding-left: 1.5%;
 }
 
 :global(.cardLink) {
-    border-radius: 8px;
-    background-color: #154da6;
-    text-decoration: none;
+  border-radius: 8px;
+  background-color: #154da6;
+  text-decoration: none;
 }
 
 :global(.cardLink:hover) {
-    background-color: rgba(71, 130, 225, 0.8);
+  background-color: rgba(71, 130, 225, 0.8);
 }
 
 :global(.cardLink:active) {
-    background-color: rgb(255, 255, 255);
-}
-
-/* PARTY/ALLIANCE CONTAINER */
-:global(.list-group-item) {
-    color: var(--white) !important;
-    font-weight: bold;
-
-    width: 210px;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-    white-space: normal;
-    white-space: normal !important;
-
-    background: rgba(255, 199, 44, 0.9) !important;
-    box-shadow: 0px 0px 10px rgba(255, 199, 44, 1) !important;
-    backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(5px) !important;
-    border: 2px solid rgba(255, 199, 44, 1) !important;
-
-    padding: 4% 4% !important;
-    display: flex !important;
-    align-content: center;
+  background-color: white;
 }
 
 /* PILLS */
 :global(.rounded-pill) {
-    font-size: 0.7rem !important;
+  font-size: 0.7rem !important;
+}
+
+/* CARD COMPONENT */
+:global(.card) {
+  width: 210px;
+  border-radius: 20px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 4% 0.5% 3% 0; */
+  background: rgba(3, 87, 222, 0.9) !important;
+  box-shadow: 0 0px 20px rgba(10, 61, 145, 0.8) !important;
+  backdrop-filter: blur(5px) !important;
 }
 
 /* CARD BODY */
 :global(.card-body) {
-
+  padding: 2% 0 6% 0 !important;
 }
 
 /* NAME OF CANDIDATE */
 :global(.card-title) {
-    font-weight: bold;
-    font-size: 1.2rem;
-    color: var(--white) !important;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white !important;
 }
 
 /* IMAGE OF CANDIDATE */
 :global(.card-img-bottom) {
-    width: 166px !important;
-    height: 166px !important;
-    margin: 10px;
-    object-fit: cover; /* Crop image /wo stretching */
-    border-radius: 16px !important;
-    border: 2px groove rgba(10, 61, 145, 1) !important;
+  width: 166px !important;
+  height: 166px !important;
+  margin: 20px;
+  object-fit: cover; /* Crop image without stretching */
+  border-radius: 16px !important;
+  border: 2px groove rgba(10, 61, 145, 1) !important;
 }
 
 /* LINK */
 :global(.card-link) {
-    color: var(--white);
-    font-weight: medium;
+  color: white;
+  font-weight: medium;
+}
+
+/* PARTY/ALLIANCE CONTAINER */
+:global(.list-group-item-top),
+:global(.list-group-item-bot) {
+  color: var(--text-color, white) !important;
+  font-weight: bold;
+  width: 208px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal !important;
+  padding: 4% 4% !important;
+  display: flex !important;
+  align-content: center;
+  border-left: 3px solid var(--bg-color) !important;
+  border-right: 3px solid var(--bg-color) !important;
+  background: var(--bg-color) !important;
+  box-shadow: 0px 0px 4px var(--shadow-color) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+:global(.list-group-item-top) {
+  border-top: 2px solid var(--border-color, yellow) !important;
+
+}
+
+:global(.list-group-item-bot) {
+  border-bottom: 2px solid var(--border-color, yellow) !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
+:global(.noCandidates) {
+  color: var(--white);
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+}
+
+:global(.noCandidatesContainer) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin: 2.4% auto;
+  padding: 0.5%;
+
+  width: 14% !important;
+
+  border-radius: 20px;
+
+  background-color: rgb(27, 89, 190) !important;
+}
+
+/* PARTY SETTINGS */
+:global(.party-Independent) {
+  --bg-color: var(--bg-black);
+  --border-color: var(--bg-black);
+  --shadow-color: var(--bg-black);
+}
+
+:global(.party-PDP) {
+  --bg-color: var(--bg-green);
+  --border-color: var(--bg-green);
+  --shadow-color: var(--bg-green);
+}
+
+:global(.party-Nacionalista) {
+  --bg-color: var(--bg-blue);
+  --border-color: var(--bg-blue);
+  --shadow-color: var(--bg-blue);
+}
+
+:global(.party-Makabayan) {
+  --bg-color: var(--bg-red);
+  --border-color: var(--bg-red);
+  --shadow-color: var(--bg-red);
+}
+
+:global(.party-NPC) {
+  --bg-color: var(--bg-purple);
+  --border-color: var(--bg-purple);
+  --shadow-color: var(--bg-purple);
+}
+
+:global(.party-PLM) {
+  --bg-color: var(--bg-darkblue);
+  --border-color: var(--bg-darkblue);
+  --shadow-color: var(--bg-darkblue);
+}
+
+:global(.party-Lakas) {
+  --bg-color: var(--bg-yellow);
+  --border-color: var(--bg-yellow);
+  --shadow-color: var(--bg-yellow);
+}
+
+:global(.party-none) {
+  --bg-color: var(--bg-none);
+  --border-color: var(--bg-none);
+  --shadow-color: var(--bg-none);
+}
+
+/* ALLIANCE SETTINGS */
+:global(.alliance-Alyansa) {
+  --bg-color: var(--bg-red);
+  --border-color: var(--bg-red);
+  --shadow-color: var(--bg-red);
+}
+
+:global(.alliance-KiBam) {
+  --bg-color: var(--bg-green);
+  --border-color: var(--bg-green);
+  --shadow-color: var(--bg-green);
+}
+
+:global(.alliance-Oposisyon) {
+  --bg-color: var(--bg-purple);
+  --border-color: var(--bg-purple);
+  --shadow-color: var(--bg-purple);
+}
+
+:global(.alliance-PDP) {
+  --bg-color: var(--bg-blue);
+  --border-color: var(--bg-blue);
+  --shadow-color: var(--bg-blue);
+}
+
+:global(.alliance-Riding) {
+  --bg-color: var(--bg-darkblue);
+  --border-color: var(--bg-darkblue);
+  --shadow-color: var(--bg-darkblue);
+}
+
+:global(.alliance-none) {
+  --bg-color: var(--bg-none);
+  --border-color: var(--bg-none);
+  --shadow-color: var(--bg-none);
 }

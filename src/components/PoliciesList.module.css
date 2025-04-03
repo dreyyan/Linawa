@@ -1,10 +1,21 @@
-:global(.accordion) {  /* Decorates the accordions */
+:global(.accordion) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 1000px;
-  text-align: justify;
-  font-size: 25px;
-  --bs-accordion-active-bg: rgba(148, 20, 20, 0.582);
-  --bs-accordion-bg: rgba(238, 163, 163, 0.466);
-  --bs-accordion-btn-padding-x: 500px;
-  --bs-accordion-inner-border-radius: 5px;
-  --bs-accordion-border-color: rgb(56, 54, 54);
+
+  margin: 1% auto;
+  padding: 4%;
+
+  --bs-accordion-active-bg: rgba(10, 61, 145, 1) !important;
+  --bs-accordion-bg: rgba(255, 199, 44, 1) !important;
+}
+
+:global(.accordion-button) {
+  font-weight: bold !important;
+  color: var(--white) !important;
+}
+
+:global(.accordion-button.collapsed) {
+  color: var(--bg-darkblue) !important;
 }

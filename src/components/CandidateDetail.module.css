@@ -3,7 +3,8 @@
     justify-content: center;
 }
 
-:global(.candidateProfilePage) {
+/* GRID CONTAINER */
+:global(.candidateProfilePage.card) {
     color: var(--white) !important;
 
     background: rgba(18, 77, 173, 0.8) !important;
@@ -12,28 +13,81 @@
     -webkit-backdrop-filter: blur(5px) !important;
     border: 2px solid rgba(10, 61, 145, 1) !important;
 
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr 1fr;
+    grid-template-rows: 120px 200px 260px 50px;
+    grid-template-areas: 
+      "title title title"
+      "info info image"
+      "info info stats"
+      "back back back";
 
     margin: 2%;
-    padding: 0 4%;
+    padding: 1% 0% 1% 0%;
 
     width: 60% !important;
 }
 
-:global(.candidateImageFormat) {
-    width: 20% !important;
-    min-height: 20% !important;
+:global(.titleContainer) {
+    grid-area: title;
+    justify-self: center;
+}
 
-    border-radius: 12px;
+:global(.title) {
+
+    margin: 0 !important;
+
+    font-weight: bold;
+    font-size: 4rem;
+
+
+}
+
+:global(.list-group) {
+
+}
+
+:global(.tableInformation) {
+    grid-area: info;
+    width: 94%;
+    justify-self: flex-end;
+    align-self: flex-start;
+}
+
+:global(.tableTitle) {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+:global(.firstCol) {
+    text-align: end;
+    font-weight: bold;
+    border: 1px double black;
+}
+
+:global(.secondCol) {
+    border: 1px double black;
+}
+
+:global(.list-group-item) {
+    color: var(--black) !important;
+}
+
+:global(.candidateImageFormat) {
+    grid-area: image;
+    align-self: flex-start;
+
+    width: 166px !important;
+    height: 166px !important;
+    justify-self: center; /* Centers horizontally */
+    object-fit: cover; /* Crop image without stretching */
+    border-radius: 16px !important;
+
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 1) !important;
     backdrop-filter: blur(5px) !important;
     -webkit-backdrop-filter: blur(5px) !important;
     border: 2px solid rgba(255, 255, 255, 1) !important;
 
-    margin: 6% 0 4% 0;
 }
 
 :global(.badge) {
@@ -44,7 +98,17 @@
     width: 100%;
 }
 
+:global(.card-footer) {
+    grid-area: back !important;
+}
+
+:global(.btn.btn-primary) {
+    margin: 0;
+    width: 100%;
+}
+
 :global(.returnLink) {
+    grid-area: stats;
     background-color: var(--blue);
     color: var(--white);
     
