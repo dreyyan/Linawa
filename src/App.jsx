@@ -8,7 +8,7 @@ import CandidateDetail from './components/CandidateDetail.jsx';
 // PAGES
 import Candidates from './pages/candidates.jsx';
 import Policies from './pages/policies.jsx';
-import PetitionsAndPolls from './pages/petitions-and-polls.jsx';
+import PetitionsAndReports from './pages/petitions-and-reports.jsx';
 import News from './pages/news.jsx';
 import AboutUs from './pages/about-us.jsx';
 // BOOTSTRAP
@@ -31,7 +31,7 @@ function Home() {
             <Route path="/candidates/:id" element={<CandidatesProfile />} />
             <Route path="/pages/candidate-profiles/:name" element={<CandidateDetail />} />
             <Route path="/pages/policies" element={<Policies />} />
-            <Route path="/pages/petitions-and-polls" element={<PetitionsAndPolls />} />
+            <Route path="/pages/petitions-and-reports" element={<PetitionsAndReports />} />
             <Route path="/pages/news" element={<News />} />
             <Route path="/pages/about-us" element={<AboutUs />} />
           </Routes>

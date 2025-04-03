@@ -1,9 +1,24 @@
 :root {
-  --blue: #0A3D91;
-  --red: #C8102E;
-  --yellow: #FFC72C;
-  --white: #FFFFFF;
-  --black: #000000;
+  /* PALETTE */
+  --blue: rgb(10, 61, 145);
+  --red: rgb(200, 16, 46);
+  --yellow: rgb(255, 199, 44);
+  --white: rgb(255, 255, 255);
+  --black: rgb(0, 0, 0);
+
+  /* PARTY */
+  --bg-red: rgb(200, 16, 46);
+  --bg-yellow: rgb(255, 199, 44);
+  --bg-green: rgb(0, 128, 0);
+  --bg-blue: rgb(10, 61, 145);
+  --bg-darkblue: rgb(0, 25, 60);
+  --bg-purple: rgb(102, 51, 153);
+  --bg-black: rgb(0, 0, 0);
+  --bg-none: rgb(35, 35, 35);
+
+  /* ALLIANCE */
+  --alliance-lightgray: rgb(211, 211, 211);
+  --alliance-lightcyan: rgb(153, 255, 255);
 }
 
 body {
