@@ -15,7 +15,7 @@ const PetitionForm = () => {
     <>
       <div className="formContainer">
         <select
-          className="form-select"
+          className="form-select-petition"
           aria-label="Default select example"
           value={selectedOption}
           onChange={handleSelectChange}
