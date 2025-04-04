@@ -54,11 +54,11 @@ function Home() {
             }
           />
           <Route
-            path="/pages/petitions-and-polls"
+            path="/pages/petitions-and-reports"
             element={
               <>
                 <Header />
-                <PetitionsAndPolls />
+                <PetitionsAndReports />
               </>
             }
           />
