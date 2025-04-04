@@ -16,8 +16,8 @@
     border: 2px solid rgba(10, 61, 145, 1) !important;
 }
 
-:global(.form-select) {
-    min-width: 34%;
+:global(.form-select-petition) {
+    max-width: 40%;
 }
 
 :global(.inputEmailAddress) {

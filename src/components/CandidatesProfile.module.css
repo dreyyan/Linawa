@@ -41,7 +41,7 @@
 
 /* Filter Dropdown */
 :global(.form-select) {
-  width: clamp(10%, 12%, 60%) !important;
+  max-width: 10% !important;
   max-height: 1% !important;
   margin: 1% 0 1% 1%;
 }
