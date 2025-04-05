@@ -15,6 +15,7 @@ import "./App.css";
 import PrivateRoutes from "./components/PrivateRoutes.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignupPage.jsx";
+import HomePage from "./pages/homePage.jsx";
 
 function Home() {
   return (
@@ -31,7 +32,7 @@ function Home() {
             element={
               <>
                 <Header />
-                <homePage />
+                <HomePage />
               </>
             }
           />
