@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 /backend/privateKey.json
-
-/src/firebase.js
+/backend/.env

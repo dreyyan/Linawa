@@ -1,15 +1,13 @@
-import React from 'react'
-import Grid from '../components/Grid'
+import React from 'react';
+import Grid from '../components/Grid';
+import MainHome from '../components/MainHomePage';
 
-import './styles/FrontPage.css'
+import './styles/home.css';
+
 const HomePage = () => {
   return (
     <>
-        <div className="subHeader">
-            <h1 className="mainPageTitle">LINAWA</h1>
-            <q className="titleQuote">Linaw ng Bayan</q>
-            <HomePage/>
-        </div>
+      <MainHome/>
     </>
   )
 }

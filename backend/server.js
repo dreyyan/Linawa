@@ -10,11 +10,12 @@ app.use(cors());
 app.use(express.json());
 
 
-const serviceAccount = require("./privateKey.json");
+const serviceAccount = require("privateKey.json");
 admin.initializeApp({
-credential: admin.credential.cert(serviceAccount),
-databaseURL: process.env.FIREBASE_DATABASE_URL,
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: process.env.FIREBASE_DATABASE_URL,
 });
+
 const db = admin.firestore();
 
 app.use("/api/report-issue", require("./routes/reportIssueRoutes"));
