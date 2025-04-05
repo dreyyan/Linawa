@@ -17,7 +17,6 @@ const ReportIssues = () => {
       setUserEmail(currentUser.email);
     } else {
       alert('You must be signed in to report an issue.');
-      // Optional: redirect to login page
     }
   }, []);
 
@@ -66,11 +65,11 @@ const ReportIssues = () => {
         <div className="map-container">
           <MapComponent onLocationSelect={handleLocationSelect} />
         </div>
-        <div className="form-container-right">
+    
           <form onSubmit={handleSubmit} className="report-issue-form">
             <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="category" className="form-label">Category</label>
+              <div className="category-group">
+                <label htmlFor="category" className="form-label">Category:</label>
                 <div className="dropdown-container">
                   <select
                     id="category"
@@ -86,11 +85,12 @@ const ReportIssues = () => {
                     <option value="Misinformation">Misinformation</option>
                     <option value="Polling-Station-Problem">Polling Station Problems</option>
                   </select>
+                  <span className="dropdown-icon">▼</span>
                 </div>
               </div>
 
-              <div className="form-group">
-                <label htmlFor="description" className="form-label">Description</label>
+              <div className="description-group">
+                <label htmlFor="description" className="form-label">Description:</label>
                 <textarea
                   id="description"
                   className="form-control"
@@ -106,7 +106,7 @@ const ReportIssues = () => {
               Submit Report
             </button>
           </form>
-        </div>
+       
       </div>
     </div>
   );
