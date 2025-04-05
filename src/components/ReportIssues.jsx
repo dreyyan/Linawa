@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getAuth } from 'firebase/auth';
 import MapComponent from './MapComponent';
+import styles from "./ReportIssue.module.css";
 
 const ReportIssues = () => {
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -60,45 +61,48 @@ const ReportIssues = () => {
   };
 
   return (
-    <div className="container mt-4">
-      <h1 className="mb-4 text-center">Report Election Issue</h1>
-      <div className="row">
-        <div className="col-md-6">
+    <div className="report-issue-container">
+      <div className="form-container">
+        <div className="map-container">
           <MapComponent onLocationSelect={handleLocationSelect} />
         </div>
-        <div className="col-md-6">
-          <form onSubmit={handleSubmit} className="bg-light p-4 rounded shadow-sm">
-            <div className="form-group mb-3">
-              <label htmlFor="category">Category</label>
-              <select
-                id="category"
-                className="form-control"
-                value={category}
-                onChange={(e) => setCategory(e.target.value)}
-                required
-              >
-                <option value="">Select Category</option>
-                <option value="Vote-Buying">Vote Buying</option>
-                <option value="Election-Fraud">Election Fraud</option>
-                <option value="Vote-Tampering">Vote Tampering</option>
-                <option value="Misinformation">Misinformation</option>
-                <option value="Polling-Station-Problem">Polling Station Problems</option>
-              </select>
+        <div className="form-container-right">
+          <form onSubmit={handleSubmit} className="report-issue-form">
+            <div className="form-row">
+              <div className="form-group">
+                <label htmlFor="category" className="form-label">Category</label>
+                <div className="dropdown-container">
+                  <select
+                    id="category"
+                    className="form-control"
+                    value={category}
+                    onChange={(e) => setCategory(e.target.value)}
+                    required
+                  >
+                    <option value="">Select Category</option>
+                    <option value="Vote-Buying">Vote Buying</option>
+                    <option value="Election-Fraud">Election Fraud</option>
+                    <option value="Vote-Tampering">Vote Tampering</option>
+                    <option value="Misinformation">Misinformation</option>
+                    <option value="Polling-Station-Problem">Polling Station Problems</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="description" className="form-label">Description</label>
+                <textarea
+                  id="description"
+                  className="form-control"
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  required
+                  rows="4"
+                />
+              </div>
             </div>
 
-            <div className="form-group mb-3">
-              <label htmlFor="description">Description</label>
-              <textarea
-                id="description"
-                className="form-control"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
-                required
-                rows="4"
-              />
-            </div>
-
-            <button type="submit" className="btn btn-primary w-100">
+            <button type="submit" className="submit-button">
               Submit Report
             </button>
           </form>

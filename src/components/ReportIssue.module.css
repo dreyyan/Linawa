@@ -1,0 +1,109 @@
+/* Report Issue Styling */
+.report-issue-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  .report-issue-header {
+    font-size: 2.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .map-container {
+    flex: 1;
+    margin: 20px;
+  }
+  
+  .form-container-right {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .report-issue-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+  }
+  
+  .form-control {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+  }
+  
+  .form-control:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  textarea.form-control {
+    resize: none;
+  }
+  
+  .dropdown-container {
+    border: 2px solid #000;
+    position: relative;
+  }
+  
+  .dropdown-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #aaa;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button:focus {
+    outline: none;
+  }
+  

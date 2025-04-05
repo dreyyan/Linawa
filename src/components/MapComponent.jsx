@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 
+
 const MapComponent = ({ onLocationSelect }) => {
   const [reports, setReports] = useState([]);
   const [selectedLocation, setSelectedLocation] = useState(null);
@@ -54,10 +55,10 @@ const MapComponent = ({ onLocationSelect }) => {
       {reports.map((report) => (
         <Marker key={report.id} position={[report.location.lat, report.location.lng]}>
           <Popup>
-            <strong>Category:</strong> {report.category} <br />
-            <strong>Description:</strong> {report.description} <br />
-            <strong>Reported By:</strong> {report.user_email} <br />
-            <strong>Status:</strong> {report.status} <br />
+            <span>Category:</span> {report.category} <br />
+            <span>Description:</span> {report.description} <br />
+            <span>Reported By:</span> {report.user_email} <br />
+            <span>Status:</span> {report.status} <br />
           </Popup>
         </Marker>
       ))}

@@ -1,37 +1,66 @@
+/* General container for the form */
 :global(.formContainer) {
     display: flex;
     flex-direction: column;
     justify-content: center;
-
     margin: 2.4% auto;
     padding: 4%;
-
     width: clamp(40%, 60%, 80%);
     height: clamp(20%, 40%, 60%);
-
-    background: rgba(18, 77, 173, 0.8) !important;
-    box-shadow: 0 0px 20px rgba(10, 61, 145, 0.8) !important;
-    backdrop-filter: blur(5px) !important;
-    -webkit-backdrop-filter: blur(5px) !important;
-    border: 2px solid rgba(10, 61, 145, 1) !important;
+    background: rgba(255, 255, 255, 0.69);
+    box-shadow: 0 0px 20px rgba(10, 61, 145, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 2px solid rgba(10, 61, 145, 1);
+    border-radius: 14px;
+}
+/*Styling for section title*/
+:global(.section-title-div){
+    text-align: center;
+    margin-bottom: 1%;
 }
 
+/* Petition select dropdown */
 :global(.form-select-petition) {
-    max-width: 40%;
+    max-width: 54%;
+    margin: 1% 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 16px
 }
-
+:global(.section-title){
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+:global(.section-description){
+    font-size: 1.2rem;
+}
+/* Email input container */
 :global(.inputEmailAddress) {
     width: 54%;
     margin: 1% 0;
 }
 
+/* Message input container */
 :global(.inputMessage) {
-    width: clamp(40%, 100%, 100%);
+    width: 100%;
     margin: 1% 0;
 }
 
+/* Button styling */
 :global(.btn.btn-primary) {
-    margin: 10% 0 1% 0;
+    margin: 5% 0 1% 0;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: #4a90e2; /* Primary button color */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+:global(.btn.btn-primary):hover {
+    background-color: #357ab7; /* Darker hover color */
 }
 
 /* Removes resizable textarea */
@@ -39,10 +68,33 @@
     resize: none !important;
 }
 
-/* LABEL */
+/* Label styling */
 :global(.form-label) {
-    color: var(--white);
-
-    font-size: large;
+    color: var(--black);
+    font-size: 1.1rem;
     font-weight: bold;
+    margin-bottom: 0.5rem; /* Space between label and input field */
 }
+/* InfoSection Styles */
+:global(.info-section) {
+    background-color: #cce7ff; /* Light blue background */
+    border: 2px solid #4a90e2; /* Blue border */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+  }
+  
+:global(.info-section h2) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+  
+:global(.info-section p) {
+    font-size: 1rem;
+    color: #333;
+}
+  
