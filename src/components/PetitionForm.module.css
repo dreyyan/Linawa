@@ -36,7 +36,7 @@
     font-size: 1.2rem;
 }
 /* Email input container */
-:global(.inputEmailAddress) {
+:global(.inputPetitionTitle) {
     width: 54%;
     margin: 1% 0;
 }
