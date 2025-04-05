@@ -14,7 +14,7 @@ const Header = () => {
     return (
         <>
             <div className={styles.divNavigation}>
-                <a href="/"><img src="../public/logo-linawa.png" className={styles.logo}/></a>
+                <Link to ="/pages/homePage"><img src="../public/logo-linawa.png" className={styles.logo}/></Link>
                 <nav className={styles.navLinks}>
                     <Link to="/pages/candidates" className={styles.navLink}>CANDIDATES</Link>
                     <Link to="/pages/policies" className={styles.navLink}>POLICIES</Link>

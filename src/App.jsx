@@ -27,6 +27,15 @@ function Home() {
         {/* Private Routes */}
         <Route element={<PrivateRoutes />}>
           <Route
+            path="/pages/homePage"
+            element={
+              <>
+                <Header />
+                <homePage />
+              </>
+            }
+          />
+          <Route
             path="/pages/candidates"
             element={
               <>
