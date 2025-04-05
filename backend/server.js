@@ -24,3 +24,18 @@ app.use("/api/news", require("./routes/newsRoutes"));
 app.listen(port, () => {
   console.log(`Port is running on port ${port}`);
 });
+
+// const serviceAccount = require("./privateKey.json");
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: process.env.FIREBASE_DATABASE_URL,
+// });
+
+// const db = admin.firestore();
+
+// app.use("/api/report-issue", require("./routes/reportIssueRoutes"));
+app.use("/api/news", require("./routes/newsRoutes"));
+
+app.listen(port, () => {
+  console.log(`Port is running on port ${port}`);
+});
