@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 // STYLES
 import styles from './PetitionForm.module.css'
+import ReportIssues from './ReportIssues';
 
 const PetitionForm = () => {
   // State to track the selected option
@@ -53,7 +54,7 @@ const PetitionForm = () => {
 
         {selectedOption === "Submit Report" && (
           <div className="reportSection">
-            {/* ADD REPORT ISSUES */}
+            <ReportIssues/>
           </div>
         )}
       </div>
