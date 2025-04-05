@@ -17,7 +17,7 @@ const sendReport = async (req, res) => {
       location: new admin.firestore.GeoPoint(location.lat, location.lng),
       timestamp: admin.firestore.FieldValue.serverTimestamp(),
       status: "pending",
-      user_email,
+      email: user_email,
     });
     res.status(201).json({
       message: "Issue reported successfully",

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { getAuth } from 'firebase/auth';
 import MapComponent from './MapComponent';
 
 const ReportIssues = () => {
@@ -7,6 +8,18 @@ const ReportIssues = () => {
   const [description, setDescription] = useState('');
   const [userEmail, setUserEmail] = useState('');
 
+  const auth = getAuth();
+
+  useEffect(() => {
+    const currentUser = auth.currentUser;
+    if (currentUser) {
+      setUserEmail(currentUser.email);
+    } else {
+      alert('You must be signed in to report an issue.');
+      // Optional: redirect to login page
+    }
+  }, []);
+
   const handleLocationSelect = (location) => {
     setSelectedLocation(location);
   };
@@ -14,14 +27,13 @@ const ReportIssues = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!category || !description || !userEmail || !selectedLocation) {
+    if (!category || !description || !selectedLocation || !userEmail) {
       alert('Please fill out all fields and select a location!');
       return;
     }
 
     const { lat, lng } = selectedLocation;
 
-    // Send the form data and location to your backend (API endpoint)
     const response = await fetch('http://localhost:5000/api/report-issue', {
       method: 'POST',
       headers: {
@@ -41,10 +53,10 @@ const ReportIssues = () => {
     } else {
       alert('Error reporting issue: ' + data.message);
     }
-    setCategory("");
-    setDescription("");
-    setUserEmail("");
-    
+
+    setCategory('');
+    setDescription('');
+    setSelectedLocation(null);
   };
 
   return (
@@ -83,18 +95,6 @@ const ReportIssues = () => {
                 onChange={(e) => setDescription(e.target.value)}
                 required
                 rows="4"
-              />
-            </div>
-
-            <div className="form-group mb-3">
-              <label htmlFor="userEmail">Your Email</label>
-              <input
-                id="userEmail"
-                type="email"
-                className="form-control"
-                value={userEmail}
-                onChange={(e) => setUserEmail(e.target.value)}
-                required
               />
             </div>
 
