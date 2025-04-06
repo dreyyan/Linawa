@@ -57,8 +57,7 @@ const PetitionForm = () => {
         </p>
       </div>
 
-      {/* Info Section */}
-      <InfoSection selectedOption={activeTab === "petition" ? "File a Petition" : "Submit Report"} />
+      
 
       {/* Tab toggle buttons */}
       <div className="tab-toggle">
@@ -75,6 +74,9 @@ const PetitionForm = () => {
           Report Issue
         </button>
       </div>
+
+      {/* Info Section */}
+      <InfoSection selectedOption={activeTab === "petition" ? "File a Petition" : "Submit Report"} />
 
       {/* PETITION FORM */}
       {activeTab === "petition" && (
