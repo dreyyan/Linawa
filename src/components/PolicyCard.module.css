@@ -1,0 +1,21 @@
+:global(.accordion-body) {
+    padding: 1.25rem;
+    overflow: auto;
+  }
+  
+  :global(.btn ){
+    display: inline-block;
+    margin-top: 1rem;
+  }
+
+  :global(.summary-title){
+    color: #000;
+    font-weight: bold;
+  }
+  :global(.summary-text){
+    background-color: #cce7ff; /* Light blue background */
+    border: 2px solid #4a90e2; /* Blue border */
+    padding: 10px;
+    margin: 14px;
+    border-radius: 14px;
+  }

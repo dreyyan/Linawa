@@ -2,13 +2,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 1000px;
-
+  width: 60%;
+  backdrop-filter: blur(5px);
   margin: 1% auto;
-  padding: 4%;
-
+  box-shadow: 0 0px 20px rgba(10, 61, 145, 0.8);
   --bs-accordion-active-bg: rgba(10, 61, 145, 1) !important;
-  --bs-accordion-bg: rgba(255, 199, 44, 1) !important;
+  --bs-accordion-bg: rgba(255, 255, 255, 0.69) !important;
 }
 
 :global(.accordion-button) {
@@ -18,4 +17,10 @@
 
 :global(.accordion-button.collapsed) {
   color: var(--bg-darkblue) !important;
+}
+:global(.policy-text){
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: #000000;
 }
