@@ -16,6 +16,7 @@ import PrivateRoutes from "./components/PrivateRoutes.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignUpPage from "./pages/SignupPage.jsx";
 import HomePage from "./pages/homePage.jsx";
+import LogoutButton from "./components/Logout.jsx";
 
 function Home() {
   return (
@@ -27,12 +28,15 @@ function Home() {
 
         {/* Private Routes */}
         <Route element={<PrivateRoutes />}>
+          
+          
           <Route
             path="/pages/homePage"
             element={
               <>
                 <Header />
                 <HomePage />
+                <LogoutButton/>
               </>
             }
           />
@@ -42,6 +46,7 @@ function Home() {
               <>
                 <Header />
                 <Candidates />
+                <LogoutButton/>
               </>
             }
           />
@@ -51,6 +56,7 @@ function Home() {
               <>
                 <Header />
                 <CandidatesProfile />
+                <LogoutButton/>
               </>
             }
           />
@@ -60,6 +66,7 @@ function Home() {
               <>
                 <Header />
                 <Policies />
+                <LogoutButton/>
               </>
             }
           />
@@ -69,6 +76,7 @@ function Home() {
               <>
                 <Header />
                 <PetitionsAndReports />
+                <LogoutButton/>
               </>
             }
           />
@@ -78,6 +86,7 @@ function Home() {
               <>
                 <Header />
                 <News />
+                <LogoutButton/>
               </>
             }
           />
@@ -87,6 +96,7 @@ function Home() {
               <>
                 <Header />
                 <AboutUs />
+                <LogoutButton/>
               </>
             }
           />
