@@ -8,6 +8,7 @@ import Policies from "./pages/policies.jsx";
 import PetitionsAndReports from "./pages/petitions-and-reports.jsx";
 import News from "./pages/news.jsx";
 import AboutUs from "./pages/about-us.jsx";
+import MockElectionPage from "./pages/mock-election.jsx";
 // BOOTSTRAP
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
@@ -28,8 +29,6 @@ function Home() {
 
         {/* Private Routes */}
         <Route element={<PrivateRoutes />}>
-          
-          
           <Route
             path="/pages/homePage"
             element={
@@ -100,7 +99,18 @@ function Home() {
               </>
             }
           />
+          <Route
+            path="/pages/mock-election"
+            element={
+              <>
+                <Header />
+                <MockElectionPage/>
+                <LogoutButton/>
+              </>
+            }
+          />
         </Route>
+        
       </Routes>
     </>
   );

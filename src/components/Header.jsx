@@ -8,6 +8,7 @@ import PetitionsAndReports from '../pages/petitions-and-reports.jsx'
 import News from '../pages/news.jsx'
 import AboutUs from '../pages/about-us.jsx'
 import HomePage from '../pages/homePage.jsx';
+import MockElectionPage from "../pages/mock-election.jsx";
 // STYLE
 import styles from './Header.module.css'
 
@@ -17,6 +18,7 @@ const Header = () => {
             <div className={styles.divNavigation}>
                 <Link to ="/pages/homepage"><img src="../public/logo-linawa.png" className={styles.logo}/></Link>
                 <nav className={styles.navLinks}>
+                    <Link to="/pages/mock-election" className={styles.navLink}>MOCK ELECTION</Link>
                     <Link to="/pages/candidates" className={styles.navLink}>CANDIDATES</Link>
                     <Link to="/pages/policies" className={styles.navLink}>POLICIES</Link>
                     <Link to="/pages/petitions-and-reports" className={styles.navLink}>PETITIONS & REPORTS</Link>
