@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useAuth } from "../context/AuthContext";
 import { useNavigate } from "react-router-dom";
-import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
-import { auth } from '../firebase'; 
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { auth } from "../firebase";
+import "./styles/signup.css";
 
 const SignUpPage = () => {
   const { signup } = useAuth();
@@ -10,6 +11,12 @@ const SignUpPage = () => {
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const signUpStyle = {
+    color: "white",
+  };
+  const labelStyle = {
+    color: "black",
+  };
 
   const handleSignUp = async (e) => {
     e.preventDefault();
@@ -35,47 +42,48 @@ const SignUpPage = () => {
   };
 
   return (
-    <div className="sign-up-container">
-      
-          <h2>Sign Up</h2>
-          <p>Stay updated with the latest election news.</p>
+    <div className="sign-up-container-wrap">
+      <div className="sign-up-container">
+        <h2>SIGN-UP</h2>
+        <p>Stay updated with the latest election news.</p>
 
-          <form onSubmit={handleSignUp}>
-            <div>
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
+        <form onSubmit={handleSignUp}>
+          <label style={labelStyle} htmlFor="email">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-            <div>
-              <label htmlFor="password">Password</label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
+          <label style={labelStyle} htmlFor="password">
+            Password
+          </label>
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-            <button type="submit">Sign Up</button>
-          </form>
+          <button type="submit">Sign Up</button>
+        </form>
 
-          {error && <div>{error}</div>}
+        {error && <div>{error}</div>}
 
-          <div className="google-sign-up">
-            <button onClick={handleGoogleSignUp}>Sign up with Google</button>
-          </div>
-
-          <p>
-            Already have an account? <a href="/">Login</a>
-          </p>
+        <div className="google-sign-up">
+          <button style={signUpStyle} onClick={handleGoogleSignUp}>Sign up with Google</button>
         </div>
+
+        <p>
+          Already have an account? <a href="/">Login</a>
+        </p>
+      </div>
+    </div>
   );
 };
 

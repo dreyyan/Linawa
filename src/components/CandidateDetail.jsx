@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import candidates from "./CandidatesData";
 // STYLE
-import styles from "./CandidateDetail.module.css";
+import styles from "CandidateDetail.module.css";
 
 const CandidateDetail = () => {
   const { name } = useParams(); // Get the candidate's name from URL

@@ -1,12 +1,12 @@
-.login-container * {
+.sign-up-container * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
   }
   
-  body .login-container {
-    background-color: #0a3d91 ;
+  body .sign-up-container {
+    background-color: #5ab1c7 ;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 30px;
@@ -15,26 +15,26 @@
     text-align: center;
   }
 
-  .login-container h2 {
-    color: #ffffff;
-    text-shadow: 1px 2px #000000 ;
+  .sign-up-container h2 {
+    color: #000000;
+    text-shadow: 1px 2px #706d6d ;
     margin-bottom: 10px;
     font-size: 50px;
   }
   
-  .login-container p {
-    color: #ffffff;
+  .sign-up-container p {
+    color: #000000;
     margin-bottom: 25px;
     font-size: 16px;
   }
   
-  .login-container form {
+  .sign-up-container form {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
   }
   
-  .login-container label {
+  .sign-up-container label {
     text-align: left;
     margin-bottom: 6px;
     color: #333;
@@ -42,7 +42,7 @@
     font-size: 14px;
   }
   
-  .login-container input {
+  .sign-up-container input {
     padding: 12px;
     margin-bottom: 16px;
     border: 1px solid #ddd;
@@ -51,15 +51,15 @@
     transition: border-color 0.3s;
   }
   
-  .login-container input:focus {
+  .sign-up-container input:focus {
     border-color: #ffc72c;
     outline: none;
     box-shadow: 0 0 0 2px rgba(74, 142, 255, 0.2);
   }
   
-  .login-container button {
-    background-color: #C8102E;
-    color: white;
+  .sign-up-container button {
+    background-color: #da1b1b;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
     padding: 12px;
@@ -69,29 +69,29 @@
     transition: background-color 0.3s;
   }
   
-  .login-container button:hover {
+  .sign-up-container button:hover {
     background-color: #720e0e;
   }
   
-  .login-container .google-login {
+  .sign-up-container .google-sign-up {
     margin: 20px 0;
   }
   
-  .login-container .google-login button {
-    background-color: white;
+  .sign-up-container .google-sign-up button {
+    background-color: rgb(12, 9, 9);
     color: #444;
-    border: 1px solid #ddd;
+    border: 1px solid #1f1d1d;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
   }
   
-  .login-container .google-login button:hover {
-    background-color: #c0c0c0;
+  .sign-up-container .google-sign-up button:hover {
+    background-color: #444040;
   }
   
-  .login-container .google-login button::before {
+  .sign-up-container .google-sign-up button::before {
     content: "";
     background-image: url('../../public/icons/googleicon.webp');
     background-repeat: no-repeat;
@@ -102,21 +102,21 @@
     display: inline-block;
   }
   
-  .login-container a {
-    color: #4a8eff;
+  .sign-up-container a {
+    color: #1e057a;
     text-decoration: none;
     font-weight: 600;
   }
   
-  .login-container a:hover {
+  .sign-up-container a:hover {
     text-decoration: underline;
   }
   
-  .login-container [type="submit"] {
+  .sign-up-container [type="submit"] {
     margin-top: 10px;
   }
   
-  .login-container div[class]:not(.google-login) {
+  .sign-up-container div[class]:not(.google-sign-up) {
     color: #d32f2f;
     margin: 10px 0;
     padding: 10px;
@@ -125,7 +125,7 @@
     text-align: center;
   }
   
-  .login-container-wrap {
+  .sign-up-container-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
