@@ -1,34 +1,21 @@
-from flask import Flask, request, jsonify
-from flask_cors import CORS
-
+import gradio as gr
 from transformers import pipeline
 
-app = Flask(__name__)
-CORS(app)
-
-
+# Load the model from Hugging Face
 summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 
-@app.route("/summarize", methods=['POST'])
-def summarize_text():
-    """
-        Recieves a policy text from the frontend and returns a summarized version.
-    """
-    try:
-        data = request.json
-        text = data.get("text", "")
+# Define the summarization function
+def summarize_text(text):
+    summary = summarizer(text, max_length=150, min_length=50, do_sample=False)
+    return summary[0]['summary_text']
 
-        if not text:
-            return jsonify({"error": "No text provided"}), 400
-        
-        summary = summarizer(text, max_length=150, min_length=50, do_sample=False)
+# Create a Gradio interface
+interface = gr.Interface(
+    fn=summarize_text,
+    inputs="text", 
+    outputs="text",  
+    live=True  
+)
 
-        return jsonify({"summary": summary[0]['summary_text']})
-    
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
-
-
-
-if __name__ == "__main__":
-    app.run(debug=True)
+# Launch the app
+interface.launch()
