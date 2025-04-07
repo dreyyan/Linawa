@@ -10,7 +10,7 @@ const MapComponent = ({ onLocationSelect }) => {
   useEffect(() => {
     const fetchReports = async () => {
       try {
-        const response = await fetch("http://localhost:5000/api/report-issue/get");
+        const response = await fetch("https://linawa-backend-api.onrender.com/api/report-issue/get");
         const data = await response.json();
 
         setReports((prevReports) => {
