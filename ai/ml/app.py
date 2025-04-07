@@ -2,7 +2,7 @@ import gradio as gr
 from transformers import pipeline
 
 # Load the model from Hugging Face
-summarizer = pipeline("summarization", model="facebook/distilbart-cnn-12-6")
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 
 # Define the summarization function
 def summarize_text(text):
