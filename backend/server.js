@@ -20,6 +20,7 @@ const db = admin.firestore();
 
 app.use("/api/report-issue", require("./routes/reportIssueRoutes"));
 app.use("/api/news", require("./routes/newsRoutes"));
+app.use("/api/summarize", require("./routes/summarizeRoutes.js"));
 
 app.listen(port, () => {
   console.log(`Port is running on port ${port}`);

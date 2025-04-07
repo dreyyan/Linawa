@@ -13,7 +13,7 @@ const PoliciesList = () => {
 
         setLoadingSummaries(prev => ({...prev, [key]: true}));
         try{
-            const response = await axios.post("http://127.0.0.1:5000/summarize", {
+            const response = await axios.post("https://huggingface.co/spaces/Ydrhan/linawa-ai-model/api/predict", {
                 text
             });
             setSummaries(prev =>({
