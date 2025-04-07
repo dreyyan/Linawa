@@ -78,7 +78,7 @@ const CandidateDetail = () => {
             </table>
           </div>
           <div className="card-footer">
-          <a href="../candidates" className="btn btn-primary">Return to Candidates</a>
+          <Link to="../pages/candidates" className="btn btn-primary">Return to Candidates</Link>
           </div>
         </div>
       </div>

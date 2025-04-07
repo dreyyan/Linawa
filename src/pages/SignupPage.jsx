@@ -22,7 +22,7 @@ const SignUpPage = () => {
     e.preventDefault();
     try {
       await signup(email, password);
-      navigate("/pages/candidates");
+      navigate("/pages/homePage");
     } catch (error) {
       setError(error.message);
     }
@@ -35,7 +35,7 @@ const SignUpPage = () => {
       const user = result.user;
       console.log("Google User:", user);
       // Navigate after successful Google sign-up
-      navigate("/pages/candidates");
+      navigate("/pages/homePage");
     } catch (error) {
       setError("Error with Google sign-up. Please try again.");
     }
