@@ -111,9 +111,10 @@ const CandidatesPolling = () => {
                 ) : (
                   <button
                     onClick={() => handleVote(candidate.id)}
-                    className="vote-btn"
+                    className={`vote-btn ${userVotes.includes(candidate.id) ? 'voted' : ''}`}
+                    disabled={userVotes.includes(candidate.id)}
                   >
-                    Vote
+                    {userVotes.includes(candidate.id) ? "Voted" : "Vote"}
                   </button>
                 )}
               </div>
