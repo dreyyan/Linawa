@@ -12,7 +12,7 @@ const LoginPage = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const labelStyle = {
-    color: "white"
+    color: "white",
   };
 
   const handleLogin = async (e) => {
@@ -45,7 +45,9 @@ const LoginPage = () => {
         <p>Stay updated with the latest election news.</p>
 
         <form onSubmit={handleLogin}>
-          <label style={labelStyle} htmlFor="email">Email</label>
+          <label style={labelStyle} htmlFor="email">
+            Email
+          </label>
           <input
             type="email"
             id="email"
@@ -54,7 +56,9 @@ const LoginPage = () => {
             required
           />
 
-          <label style={labelStyle} htmlFor="password">Password</label>
+          <label style={labelStyle} htmlFor="password">
+            Password
+          </label>
           <input
             type="password"
             id="password"

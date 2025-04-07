@@ -1,0 +1,85 @@
+/* News component styles */
+
+/* Page title styling */
+.pageTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    text-align: center;
+  }
+  
+  /* Table styling refinements */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th {
+    color: black;
+    text-align: left;
+    transition: background-color 0.2s;
+  }
+  
+  th:hover {
+    background-color: #1e40af;
+  }
+  
+  /* Image size constraints */
+  td img {
+    max-width: 120px;
+    max-height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Image container */
+  .image-cell {
+    padding: 8px;
+    width: 120px;
+  }
+  
+  /* Article title styling as a link */
+  .article-title {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+  }
+  
+  .article-title:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }
+  
+  /* Description text */
+  .article-description {
+    margin-top: 4px;
+    font-size: 0.875rem;
+    color: #4b5563;
+    line-height: 1.4;
+  }
+  
+  /* Source styling */
+  .source-name {
+    font-weight: 500;
+    color: #6b7280;
+  }
+  
+  /* Date formatting */
+  .article-date {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    td img {
+      max-width: 80px;
+      max-height: 60px;
+    }
+    
+    .image-cell {
+      width: 80px;
+    }
+  }

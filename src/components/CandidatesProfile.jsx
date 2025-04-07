@@ -14,7 +14,10 @@ const CandidatesProfile = () => {
 
   // Extract unique parties and alliances for filter dropdowns
   const uniqueParties = ["All", ...new Set(candidates.map((c) => c.party))];
-  const uniqueAlliances = ["All", ...new Set(candidates.map((c) => c.alliance))];
+  const uniqueAlliances = [
+    "All",
+    ...new Set(candidates.map((c) => c.alliance)),
+  ];
 
   // Filter candidates by search term, party, and alliance
   const filteredCandidates = candidates.filter(
@@ -61,16 +64,16 @@ const CandidatesProfile = () => {
     <>
       <nav className="navbar bg-body-tertiary">
         <div className="searchArea">
-            <form className="d-flex" role="search">
-              <input
-                className="form-control me-2"
-                type="search"
-                placeholder="search candidate..."
-                aria-label="Search"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-            </form>
+          <form className="d-flex" role="search">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="search candidate..."
+              aria-label="Search"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </form>
 
           <div class="filterText">Sort by:</div>
           <select

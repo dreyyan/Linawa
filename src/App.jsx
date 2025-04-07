@@ -2,6 +2,8 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import CandidatesProfile from "./components/CandidatesProfile.jsx";
+import CandidateDetail from "./components/CandidateDetail.jsx";
+import Grid from "./components/Grid.jsx";
 // PAGES
 import Candidates from "./pages/candidates.jsx";
 import Policies from "./pages/policies.jsx";
@@ -35,7 +37,7 @@ function Home() {
               <>
                 <Header />
                 <HomePage />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
           />
@@ -45,9 +47,13 @@ function Home() {
               <>
                 <Header />
                 <Candidates />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
+          />
+          <Route
+            path="/pages/candidate-profiles/:name"
+            element={<CandidateDetail />}
           />
           <Route
             path="/candidates/:id"
@@ -55,7 +61,7 @@ function Home() {
               <>
                 <Header />
                 <CandidatesProfile />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
           />
@@ -65,7 +71,7 @@ function Home() {
               <>
                 <Header />
                 <Policies />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
           />
@@ -75,7 +81,7 @@ function Home() {
               <>
                 <Header />
                 <PetitionsAndReports />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
           />
@@ -85,7 +91,7 @@ function Home() {
               <>
                 <Header />
                 <News />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
           />
@@ -95,7 +101,7 @@ function Home() {
               <>
                 <Header />
                 <AboutUs />
-                <LogoutButton/>
+                <LogoutButton />
               </>
             }
           />
@@ -104,13 +110,12 @@ function Home() {
             element={
               <>
                 <Header />
-                <MockElectionPage/>
-                <LogoutButton/>
+                <MockElectionPage />
+                <LogoutButton />
               </>
             }
           />
         </Route>
-        
       </Routes>
     </>
   );

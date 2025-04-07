@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import candidates from "./CandidatesData";
 // STYLE
-import styles from "CandidateDetail.module.css";
+import styles from "./CandidateDetail.module.css";
 
 const CandidateDetail = () => {
   const { name } = useParams(); // Get the candidate's name from URL
@@ -34,7 +34,7 @@ const CandidateDetail = () => {
             <table className="table table-striped">
               <thead>
                 <tr>
-                  <th colspan="2" className="tableTitle">Personal Information</th>
+                  <th colSpan="2" className="tableTitle">Personal Information</th>
                 </tr>
               </thead>
               <tbody>

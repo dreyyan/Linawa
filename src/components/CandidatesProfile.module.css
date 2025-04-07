@@ -46,10 +46,6 @@
   margin: 1% 0 1% 1%;
 }
 
-:global(input.form-control.me-2) {
-
-}
-
 /* FORM */
 :global(.d-flex) {
   margin-bottom: 0.5%;

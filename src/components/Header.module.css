@@ -1,15 +1,14 @@
 .divNavigation {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-
+    align-items: center; 
     background-color: var(--blue);
     padding: 0 2% 0 2%;
 }
 
 .logo {
     height: 80px;
-    margin: 0 20%;
+    margin: 0;
 }
 
 .navLinks {
@@ -21,29 +20,25 @@
 }
 
 .navLink {
-    color: var(--red);
-
+    color: var(--white);
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-
     margin: auto 4%;
     white-space: nowrap;
 }
-
 
 .navLink:link {
     color: var(--white);
 }
 
 .navLink:hover {
-    color: var(--white);
+    background-color: var(--red); 
+    border-radius: 4px; 
 }
 
-.navLink:visited {
-    color: var(--white);
-}
-
-.navLink:active {
-    color: var(--white);
+.activeLink {
+    color: var(--yellow) !important; 
+    font-weight: bold;
+    border-bottom: 3px solid yellow; 
 }

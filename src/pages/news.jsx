@@ -96,19 +96,30 @@ const News = () => {
                   className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
                 >
                   <td className="px-4 py-3 border-b">
-                    <div className="font-semibold">{article.title}</div>
-                    <div className="text-sm text-gray-600">
+                    <a
+                      href={article.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="article-title"
+                    >
+                      {article.title}
+                    </a>
+                    <div className="article-description">
                       {article.description}
                     </div>
                   </td>
                   <td className="px-4 py-3 border-b text-center">
-                    {article.source.name}
+                    <span className="source-name">{article.source.name}</span>
                   </td>
                   <td className="px-4 py-3 border-b text-center">
-                    {formatDate(article.publishedAt)}
+                    <span className="article-date">
+                      {formatDate(article.publishedAt)}
+                    </span>
                   </td>
-                  <td>
-                    <img src={`${article.image}`}></img>
+                  <td className="image-cell border-b">
+                    {article.image && (
+                      <img src={article.image} alt={article.title} />
+                    )}
                   </td>
                 </tr>
               ))}
